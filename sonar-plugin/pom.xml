@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.ligoj.parent</groupId>
+		<artifactId>project</artifactId>
+		<version>4.5.0</version>
+		<relativePath>../project/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>sonar-plugin</artifactId>
+	<packaging>pom</packaging>
+	<name>Parent - Sonar Project</name>
+	<description>Sonar Project parent configuration.</description>
+
+	<properties>
+		<version.license.plugin>1.10.b1</version.license.plugin>
+		<version.sonar-packaging.plugin>1.13</version.sonar-packaging.plugin>
+		<version.sonar-dev.plugin>1.8</version.sonar-dev.plugin>
+
+		<!-- To configure maven-license-plugin to check license headers -->
+		<license.name>MIT</license.name>
+		<license.title>${project.name}</license.title>
+		<license.year>${project.inceptionYear}</license.year>
+		<license.owner>${project.organization.name}</license.owner>
+		<license.mailto>dev@sonar.codehaus.org</license.mailto>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- LICENCE -->
+				<plugin>
+					<groupId>com.mycila.maven-license-plugin</groupId>
+					<artifactId>maven-license-plugin</artifactId>
+					<version>${version.license.plugin}</version>
+				</plugin>
+				<!-- SONAR PACKAGING -->
+				<plugin>
+					<groupId>org.codehaus.sonar</groupId>
+					<artifactId>sonar-packaging-maven-plugin</artifactId>
+					<version>${version.sonar-packaging.plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.sonar</groupId>
+					<artifactId>sonar-dev-maven-plugin</artifactId>
+					<version>${version.sonar-dev.plugin}</version>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.mycila.maven-license-plugin</groupId>
+										<artifactId>maven-license-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>check</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.sonar</groupId>
+										<artifactId>sonar-packaging-maven-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>check-dependencies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- LICENCE CHECK -->
+			<plugin>
+				<groupId>com.mycila.maven-license-plugin</groupId>
+				<artifactId>maven-license-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.sonar-plugins</groupId>
+						<artifactId>license-headers</artifactId>
+						<version>1.0</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<header>org/sonar/plugins/licenseheaders/${license.name}.txt</header>
+					<validHeaders>
+						<validHeader>org/sonar/plugins/licenseheaders/SonarSource.txt</validHeader>
+					</validHeaders>
+					<strictCheck>true</strictCheck>
+					<includes>
+						<include>src/main/java/**</include>
+						<include>src/test/java/**</include>
+					</includes>
+					<mapping>
+						<java>SLASHSTAR_STYLE</java>
+					</mapping>
+					<properties>
+						<title>${license.title}</title>
+						<year>${license.year}</year>
+						<owner>${license.owner}</owner>
+						<mailto>${license.mailto}</mailto>
+					</properties>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<id>enforce-license-headers</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- SONAR CONF -->
+			<plugin>
+				<groupId>org.codehaus.sonar</groupId>
+				<artifactId>sonar-packaging-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Implementation-Build>${buildNumber}</Implementation-Build>
+							<Build-Time>${timestamp}</Build-Time>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
