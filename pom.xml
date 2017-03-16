@@ -4,16 +4,16 @@
 
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
-		<artifactId>parent</artifactId>
-		<version>4.5.0</version>
-		<relativePath>parent/pom.xml</relativePath>
+		<artifactId>project</artifactId>
+		<version>4.5.1</version>
+		<relativePath>project/pom.xml</relativePath>
 	</parent>
 
 	<artifactId>root</artifactId>
 	<packaging>pom</packaging>
 	<name>Parent - Root</name>
 	<description>Agregates forge projects</description>
-  <modules>
+	<modules>
 		<module>project</module>
 		<module>maven-plugin</module>
 		<module>sonar-plugin</module>

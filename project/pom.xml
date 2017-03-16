@@ -3,23 +3,31 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ligoj.parent</groupId>
 	<artifactId>project</artifactId>
-	<version>4.5.0</version>
+	<version>4.5.1</version>
 	<packaging>pom</packaging>
 	<name>Parent - Project</name>
 	<description>Parent defining top level global configuration of forge.</description>
 	<inceptionYear>2017</inceptionYear>
-	<url>https://github.com</url>
+	<url>https://github.com/ligoj/parent</url>
+	<organization>
+		<name>Gfi Informatique</name>
+		<url>http://www.gfi.fr</url>
+	</organization>
 	<properties>
+		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
 		<scm.server>https://${domain.name}</scm.server>
 		<scm.server.anonymous>${scm.server}</scm.server.anonymous>
+		<copyright.year>2017</copyright.year>
 		<ci.server>https://${domain.name}/jenkins/</ci.server>
 		<JENKINS_URL>${ci.server}</JENKINS_URL>
 		<WORKSPACE>${project.build.directory}</WORKSPACE>
 		<proxy.server>https://${domain.name}/nexus</proxy.server>
 		<sonar.host.url>https://${domain.name}/sonar/</sonar.host.url>
 		<sonar.sourceEncoding>${encoding.java}</sonar.sourceEncoding>
+		<sonar.jacoco.reportPath>${plugin.jacoco.ut.destFile}</sonar.jacoco.reportPath>
+		<sonar.jacoco.itReportPath>${plugin.jacoco.it.destFile}</sonar.jacoco.itReportPath>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 		<encoding.java>${project.build.sourceEncoding}</encoding.java>
@@ -31,50 +39,59 @@
 		<maven.version>3.3.3</maven.version>
 		<maven.ut.argLine.memory>-Xms800m -Xmx800m</maven.ut.argLine.memory>
 		<maven.ut.argLine>${maven.ut.argLine.memory}</maven.ut.argLine>
-		<maven.ut.reuseForks>false</maven.ut.reuseForks>
+		<maven.ut.reuseForks>true</maven.ut.reuseForks>
 		<maven.ut.forkCount>1</maven.ut.forkCount>
 		<maven.ut.testTimeout>${testTimeout}</maven.ut.testTimeout>
 		<maven.it.argLine.memory>-Xms800m -Xmx800m</maven.it.argLine.memory>
 		<maven.it.argLine>${maven.it.argLine.memory}</maven.it.argLine>
 		<maven.it.skip>true</maven.it.skip>
+		<maven.it.reuseForks>false</maven.it.reuseForks>
+		<maven.it.forkCount>1</maven.it.forkCount>
+		<maven.it.testTimeout>${testTimeout}</maven.it.testTimeout>
+		<maven.it.source>${project.build.testSourceDirectory}</maven.it.source>
 		<maven.javadoc.skip>true</maven.javadoc.skip>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<!-- http://maven.apache.org/pom.html performRelease -->
 		<!-- mvn versions:display-plugin-updates -Pjacoco,jmeter,cargo,it,sources -->
 		<!-- plugin dependency versions -->
-		<maven.build.date>${maven.build.timestamp}</maven.build.date> <!-- http://www.mojohaus.org/buildnumber-maven-plugin/project-summary.html -->
-		<plugin.buildnumber>1.4</plugin.buildnumber>            <!-- http://search.maven.org/#search|ga|1|g%3Aorg.jacoco%20a%3Ajacoco-maven-plugin -->
-		<plugin.jacoco>0.7.8</plugin.jacoco>                    <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
-		<plugin.failsafe>2.19.1</plugin.failsafe>               <!-- https://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
-		<plugin.enforcer>1.4.1</plugin.enforcer>                <!-- https://jeremylong.github.io/DependencyCheck/dependency-check-maven/project-summary.html -->
-		<plugin.dependency-check>1.4.4</plugin.dependency-check>
-		<plugin.jacoco.listeners>3.4.0-FDA</plugin.jacoco.listeners> <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
-		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
-		<plugin.assembly>3.0.0</plugin.assembly>                <!-- http://www.mojohaus.org/build-helper-maven-plugin/project-summary.html -->
-		<plugin.build-helper>1.12</plugin.build-helper>         <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
-		<plugin.clean>3.0.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
-		<plugin.dependency>3.0.0</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
-		<plugin.deploy>2.8.2</plugin.deploy>                    <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
-		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
-		<plugin.install>2.5.2</plugin.install>                  <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
-		<plugin.info>2.9</plugin.info>                          <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
-		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
-		<plugin.resources>3.0.2</plugin.resources>              <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
-		<plugin.scm>1.9.5</plugin.scm>                          <!-- http://repo1.maven.org/maven2/org/codehaus/mojo/sonar-maven-plugin/ -->
-		<plugin.sonar>3.0.2</plugin.sonar>                      <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
-		<plugin.source>3.0.1</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-surefire-plugin/project-summary.html -->
-		<plugin.surefire>2.19.1</plugin.surefire>               <!-- http://maven.apache.org/plugins/maven-surefire-report-plugin/project-summary.html -->
-		<plugin.surefire.report>2.19.1</plugin.surefire.report> <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
-		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://www.mojohaus.org/versions-maven-plugin/project-summary.html -->
-		<plugin.versions>2.2</plugin.versions>
+		<maven.build.date>${maven.build.timestamp}</maven.build.date>
+		<plugin.buildnumber>1.4</plugin.buildnumber>            <!-- http://www.mojohaus.org/buildnumber-maven-plugin/project-summary.html -->
+		<plugin.jacoco>0.7.8</plugin.jacoco>                    <!-- http://search.maven.org/#search|ga|1|g%3Aorg.jacoco%20a%3Ajacoco-maven-plugin -->
+		<plugin.failsafe>2.19.1</plugin.failsafe>               <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
+		<plugin.enforcer>1.4.1</plugin.enforcer>                <!-- https://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
+		<plugin.dependency-check>1.4.4</plugin.dependency-check><!-- https://jeremylong.github.io/DependencyCheck/dependency-check-maven/project-summary.html -->
+		<plugin.jacoco.listeners>4.6.0.8784</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
+		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
+		<plugin.assembly>3.0.0</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
+		<plugin.build-helper>1.12</plugin.build-helper>         <!-- http://www.mojohaus.org/build-helper-maven-plugin/project-summary.html -->
+		<plugin.clean>3.0.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
+		<plugin.dependency>3.0.0</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
+		<plugin.deploy>2.8.2</plugin.deploy>                    <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
+		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
+		<plugin.install>2.5.2</plugin.install>                  <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
+		<plugin.info>2.9</plugin.info>                          <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
+		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
+		<plugin.resources>3.0.2</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
+		<plugin.scm>1.9.5</plugin.scm>                          <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
+		<plugin.sonar>3.0.2</plugin.sonar>                      <!-- http://repo1.maven.org/maven2/org/codehaus/mojo/sonar-maven-plugin/ -->
+		<plugin.source>3.0.1</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
+		<plugin.surefire>2.19.1</plugin.surefire>               <!-- http://maven.apache.org/plugins/maven-surefire-plugin/project-summary.html -->
+		<plugin.surefire.report>2.19.1</plugin.surefire.report> <!-- http://maven.apache.org/plugins/maven-surefire-report-plugin/project-summary.html -->
+		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
+		<plugin.versions>2.2</plugin.versions>                  <!-- http://www.mojohaus.org/versions-maven-plugin/project-summary.html -->
 		<plugin.compiler>3.6.1</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
 		<plugin.jar>3.0.2</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
 		<plugin.war>3.0.0</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
 		<plugin.javadoc>2.10.4</plugin.javadoc>                 <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/project-info.html -->
 		<plugin.gitflow>2.0.0</plugin.gitflow>
+		<plugin.coveralls>4.3.0</plugin.coveralls>              <!-- https://github.com/trautonen/coveralls-maven-plugin -->
 		<jar.selenium>2.53.1</jar.selenium>                     <!-- http://docs.seleniumhq.org/download/ -->
 		<jdk.version>1.8</jdk.version>
 		<testTimeout>1000</testTimeout>
+		<plugin.jacoco.ut.destFile>${project.build.directory}/jacoco.exec</plugin.jacoco.ut.destFile>
+		<plugin.jacoco.it.destFile>${project.build.directory}/jacoco-it.exec</plugin.jacoco.it.destFile>
+		<plugin.jacoco.include>${jacoco.includes}</plugin.jacoco.include>
+		<jacoco.includes>*</jacoco.includes>
 	</properties>
 	<prerequisites>
 		<maven>${maven.version}</maven>
@@ -89,6 +106,8 @@
 			<email>fabrice.daugan@gmail.com</email>
 			<name>Fabrice Daugan</name>
 			<url>https://github.com/fabdouglas</url>
+			<organization>Gfi Informatique</organization>
+			<organizationUrl>http://www.gfi.fr</organizationUrl>
 			<id>fabdouglas</id>
 		</developer>
 	</developers>
@@ -139,6 +158,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>${plugin.javadoc}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eluder.coveralls</groupId>
+					<artifactId>coveralls-maven-plugin</artifactId>
+					<version>${plugin.coveralls}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -247,7 +271,11 @@
 						<failIfNoTests>false</failIfNoTests>
 						<testFailureIgnore>true</testFailureIgnore>
 						<skipITs>${maven.it.skip}</skipITs>
+						<reuseForks>${maven.it.reuseForks}</reuseForks>
+						<forkCount>${maven.it.forkCount}</forkCount>
+						<forkedProcessTimeoutInSeconds>${maven.it.testTimeout}</forkedProcessTimeoutInSeconds>
 						<runOrder>alphabetical</runOrder>
+						<testSourceDirectory>${maven.it.source}</testSourceDirectory>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -392,6 +420,42 @@
 			</extension>
 		</extensions>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>enforce-java</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireJavaVersion>
+									<version>1.8.0</version>
+								</requireJavaVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<doCheck>false</doCheck>
+					<doUpdate>false</doUpdate>
+					<revisionOnScmFailure>0</revisionOnScmFailure>
+				</configuration>
+			</plugin>
 			<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>
 			</plugin>
@@ -685,6 +749,7 @@
 			<id>jmeter</id>
 			<properties>
 				<plugin.jmeter>1.10.1.3-GFI</plugin.jmeter> <!-- http://jmeter.lazerycode.com/ -->
+				<org.sonar.plugins.jmeter.jtlpath>${project.build.directory}/jmeter/result/jmeter-2.7.jtl</org.sonar.plugins.jmeter.jtlpath>
 				<jmeter.servlet.port>${cargo.servlet.port}</jmeter.servlet.port>
 				<jmeter.hostname>${cargo.hostname}</jmeter.hostname>
 				<jmeter.protocol>http</jmeter.protocol>
@@ -719,6 +784,29 @@
 								</execution>
 							</executions>
 						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-antrun-plugin</artifactId>
+							<version>${plugin.antrun}</version>
+							<executions>
+								<execution>
+									<id>post-integration-merge-jmerger</id>
+									<phase>verify</phase>
+									<goals>
+										<goal>run</goal>
+									</goals>
+									<configuration>
+										<target name="Merge JMeter Tests">
+											<copy todir="${project.build.directory}/jmeter/results" failonerror="false" flatten="true">
+												<fileset dir="${basedir}">
+													<include name="**/target/jmeter/results/*.jtl" />
+												</fileset>
+											</copy>
+										</target>
+									</configuration>
+								</execution>
+							</executions>
+						</plugin>
 					</plugins>
 				</pluginManagement>
 				<plugins>
@@ -734,6 +822,36 @@
 						</configuration>
 					</plugin>
 				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>it</id>
+			<properties>
+				<maven.it.skip>false</maven.it.skip>
+			</properties>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-failsafe-plugin</artifactId>
+							<executions>
+								<execution>
+									<id>integration-test</id>
+									<goals>
+										<goal>integration-test</goal>
+									</goals>
+								</execution>
+								<execution>
+									<id>verify</id>
+									<goals>
+										<goal>verify</goal>
+									</goals>
+								</execution>
+							</executions>
+						</plugin>
+					</plugins>
+				</pluginManagement>
 			</build>
 		</profile>
 		<profile>
@@ -773,6 +891,25 @@
 								<configuration>
 									<skip>${cargo.deploy.skip}</skip>
 								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>owasp</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.owasp</groupId>
+						<artifactId>dependency-check-maven</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>aggregate</goal>
+								</goals>
+								<phase>package</phase>
 							</execution>
 						</executions>
 					</plugin>
