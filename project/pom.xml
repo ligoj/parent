@@ -87,7 +87,7 @@
 		<plugin.dependency-check>1.4.5</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
 		<plugin.jacoco>0.7.9</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
 		<plugin.jacoco.listeners>4.6.0.8784</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
-		<plugin.sonar>3.0.2</plugin.sonar>                           <!-- http://repo1.maven.org/maven2/org/codehaus/mojo/sonar-maven-plugin/ -->
+		<plugin.sonar>3.2</plugin.sonar>                             <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
 		<jar.selenium>2.53.1</jar.selenium>                     <!-- http://docs.seleniumhq.org/download/ -->
 		<jdk.version>1.8</jdk.version>
@@ -361,7 +361,7 @@
 					<version>${plugin.versions}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
+					<groupId>org.sonarsource.scanner.maven</groupId>
 					<artifactId>sonar-maven-plugin</artifactId>
 					<version>${plugin.sonar}</version>
 				</plugin>
