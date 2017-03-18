@@ -24,10 +24,6 @@
 		<JENKINS_URL>${ci.server}</JENKINS_URL>
 		<WORKSPACE>${project.build.directory}</WORKSPACE>
 		<proxy.server>https://${domain.name}/nexus</proxy.server>
-		<sonar.host.url>https://${domain.name}/sonar/</sonar.host.url>
-		<sonar.sourceEncoding>${encoding.java}</sonar.sourceEncoding>
-		<sonar.jacoco.reportPath>${plugin.jacoco.ut.destFile}</sonar.jacoco.reportPath>
-		<sonar.jacoco.itReportPath>${plugin.jacoco.it.destFile}</sonar.jacoco.itReportPath>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 		<encoding.java>${project.build.sourceEncoding}</encoding.java>
@@ -35,7 +31,6 @@
 		<encoding.java>${project.build.sourceEncoding}</encoding.java>
 		<test.target.server.hostname>localhost</test.target.server.hostname>
 		<jar.ant>1.9.4</jar.ant>
-		<plugin.maxmem>1024m</plugin.maxmem>
 		<maven.version>3.3.3</maven.version>
 		<maven.ut.argLine.memory>-Xms800m -Xmx800m</maven.ut.argLine.memory>
 		<maven.ut.argLine>${maven.ut.argLine.memory}</maven.ut.argLine>
@@ -54,37 +49,43 @@
 		<!-- http://maven.apache.org/pom.html performRelease -->
 		<!-- mvn versions:display-plugin-updates -Pjacoco,jmeter,cargo,it,sources -->
 		<!-- plugin dependency versions -->
+		<!-- apache.org plugins -->
 		<maven.build.date>${maven.build.timestamp}</maven.build.date>
-		<plugin.buildnumber>1.4</plugin.buildnumber>            <!-- http://www.mojohaus.org/buildnumber-maven-plugin/project-summary.html -->
-		<plugin.jacoco>0.7.8</plugin.jacoco>                    <!-- http://search.maven.org/#search|ga|1|g%3Aorg.jacoco%20a%3Ajacoco-maven-plugin -->
-		<plugin.failsafe>2.19.1</plugin.failsafe>               <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
-		<plugin.enforcer>1.4.1</plugin.enforcer>                <!-- https://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
-		<plugin.dependency-check>1.4.4</plugin.dependency-check><!-- https://jeremylong.github.io/DependencyCheck/dependency-check-maven/project-summary.html -->
-		<plugin.jacoco.listeners>4.6.0.8784</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
 		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
 		<plugin.assembly>3.0.0</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
-		<plugin.build-helper>1.12</plugin.build-helper>         <!-- http://www.mojohaus.org/build-helper-maven-plugin/project-summary.html -->
 		<plugin.clean>3.0.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
+		<plugin.compiler>3.6.1</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
 		<plugin.dependency>3.0.0</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
 		<plugin.deploy>2.8.2</plugin.deploy>                    <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
+		<plugin.ear>2.10.1</plugin.ear>                         <!-- http://maven.apache.org/plugins/maven-ear-plugin/project-summary.html -->
+		<plugin.enforcer>1.4.1</plugin.enforcer>                <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
+		<plugin.failsafe>2.19.1</plugin.failsafe>               <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
+		<plugin.gitflow>1.4.1</plugin.gitflow>                  <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
 		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
 		<plugin.install>2.5.2</plugin.install>                  <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
 		<plugin.info>2.9</plugin.info>                          <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
+		<plugin.jar>3.0.2</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
 		<plugin.javadoc>2.10.4</plugin.javadoc>                 <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-info.html -->
 		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
 		<plugin.resources>3.0.2</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
 		<plugin.scm>1.9.5</plugin.scm>                          <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
-		<plugin.sonar>3.0.2</plugin.sonar>                      <!-- http://repo1.maven.org/maven2/org/codehaus/mojo/sonar-maven-plugin/ -->
 		<plugin.source>3.0.1</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
 		<plugin.surefire>2.19.1</plugin.surefire>               <!-- http://maven.apache.org/plugins/maven-surefire-plugin/project-summary.html -->
 		<plugin.surefire.report>2.19.1</plugin.surefire.report> <!-- http://maven.apache.org/plugins/maven-surefire-report-plugin/project-summary.html -->
 		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
-		<plugin.versions>2.2</plugin.versions>                  <!-- http://www.mojohaus.org/versions-maven-plugin/project-summary.html -->
-		<plugin.compiler>3.6.1</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
-		<plugin.jar>3.0.2</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
 		<plugin.war>3.0.0</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
-		<plugin.gitflow>2.0.0</plugin.gitflow>
-		<plugin.coveralls>4.3.0</plugin.coveralls>              <!-- https://github.com/trautonen/coveralls-maven-plugin -->
+
+		<!-- Non apache.org plugins -->
+		<plugin.build-helper>1.12</plugin.build-helper>              <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
+		<plugin.buildnumber>1.4</plugin.buildnumber>                 <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
+		<plugin.versions>2.3</plugin.versions>                       <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
+
+		<plugin.coveralls>4.3.0</plugin.coveralls>                   <!-- https://mvnrepository.com/artifact/org.eluder.coveralls/coveralls-maven-plugin -->
+		<plugin.dependency-check>1.4.5</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+		<plugin.jacoco>0.7.9</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+		<plugin.jacoco.listeners>4.6.0.8784</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
+		<plugin.sonar>3.0.2</plugin.sonar>                           <!-- http://repo1.maven.org/maven2/org/codehaus/mojo/sonar-maven-plugin/ -->
+
 		<jar.selenium>2.53.1</jar.selenium>                     <!-- http://docs.seleniumhq.org/download/ -->
 		<jdk.version>1.8</jdk.version>
 		<testTimeout>1000</testTimeout>
@@ -92,6 +93,11 @@
 		<plugin.jacoco.it.destFile>${project.build.directory}/jacoco-it.exec</plugin.jacoco.it.destFile>
 		<plugin.jacoco.include>${jacoco.includes}</plugin.jacoco.include>
 		<jacoco.includes>*</jacoco.includes>
+		<sonar.host.url>https://${domain.name}/sonar/</sonar.host.url>
+		<sonar.sourceEncoding>${encoding.java}</sonar.sourceEncoding>
+		<sonar.jacoco.reportPath>${plugin.jacoco.ut.destFile}</sonar.jacoco.reportPath>
+		<sonar.jacoco.itReportPath>${plugin.jacoco.it.destFile}</sonar.jacoco.itReportPath>
+		<sonar.jacoco.reportPaths>${plugin.jacoco.ut.destFile}, ${plugin.jacoco.it.destFile}</sonar.jacoco.reportPaths>
 	</properties>
 	<prerequisites>
 		<maven>${maven.version}</maven>
@@ -242,6 +248,22 @@
 					</configuration>
 				</plugin>
 				<plugin>
+					<groupId>org.sonatype.plugins</groupId>
+					<artifactId>nexus-staging-maven-plugin</artifactId>
+					<version>1.6.8</version>
+					<extensions>true</extensions>
+					<configuration>
+						<serverId>ossrh</serverId>
+						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+						<autoReleaseAfterClose>true</autoReleaseAfterClose>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>${plugin.buildnumber}</version>
+				</plugin>
+				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${plugin.surefire}</version>
@@ -257,22 +279,6 @@
 							<exclude>**/Abstract*</exclude>
 						</excludes>
 					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.sonatype.plugins</groupId>
-					<artifactId>nexus-staging-maven-plugin</artifactId>
-					<version>1.6.8</version>
-					<extensions>true</extensions>
-					<configuration>
-						<serverId>ossrh</serverId>
-						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-						<autoReleaseAfterClose>true</autoReleaseAfterClose>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>buildnumber-maven-plugin</artifactId>
-					<version>${plugin.buildnumber}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -314,6 +320,31 @@
 					<groupId>com.amashchenko.maven.plugin</groupId>
 					<artifactId>gitflow-maven-plugin</artifactId>
 					<version>${plugin.gitflow}</version>
+					<configuration>
+						<goals>clean package deploy:deploy</goals>
+						<arguments>-Dmaven.it.skip=true -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Pminify</arguments>
+						<verbose>true</verbose>
+						<skipTestProject>true</skipTestProject>
+						<gitFlowConfig>
+							<productionBranch>master</productionBranch>
+							<developmentBranch>dev</developmentBranch>
+							<featureBranchPrefix>feature/</featureBranchPrefix>
+							<releaseBranchPrefix>release/</releaseBranchPrefix>
+							<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+							<supportBranchPrefix>support/</supportBranchPrefix>
+							<versionTagPrefix />
+						</gitFlowConfig>
+						<commitMessages>
+							<featureStartMessage>[gitflow] Start feature {}</featureStartMessage>
+							<featureFinishMessage>[gitflow] Finish feature {}</featureFinishMessage>
+							<hotfixStartMessage>[gitflow] Start hotfix {}</hotfixStartMessage>
+							<hotfixFinishMessage>[gitflow] Finish hotfix {}</hotfixFinishMessage>
+							<releaseStartMessage>[gitflow] Start release {}</releaseStartMessage>
+							<releaseFinishMessage>[gitflow] Finish release {}</releaseFinishMessage>
+							<tagHotfixMessage>[gitflow] Tag hotfix {}</tagHotfixMessage>
+							<tagReleaseMessage>[gitflow] Tag release {}</tagReleaseMessage>
+						</commitMessages>
+					</configuration>
 				</plugin>
 				<plugin>
 					<!-- updates poms with passed version number runs as 'mvn versions:set -DnewVersion=0.0.2-SNAPSHOT' -->
@@ -491,35 +522,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>com.amashchenko.maven.plugin</groupId>
-				<artifactId>gitflow-maven-plugin</artifactId>
-				<configuration>
-					<goals>clean package deploy:deploy</goals>
-					<arguments>-Dmaven.it.skip=true -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Pminify</arguments>
-					<verbose>true</verbose>
-					<skipTestProject>true</skipTestProject>
-					<gitFlowConfig>
-						<productionBranch>master</productionBranch>
-						<developmentBranch>dev</developmentBranch>
-						<featureBranchPrefix>feature/</featureBranchPrefix>
-						<releaseBranchPrefix>release/</releaseBranchPrefix>
-						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
-						<supportBranchPrefix>support/</supportBranchPrefix>
-						<versionTagPrefix />
-					</gitFlowConfig>
-					<commitMessages>
-						<featureStartMessage>[gitflow] Start feature {}</featureStartMessage>
-						<featureFinishMessage>[gitflow] Finish feature {}</featureFinishMessage>
-						<hotfixStartMessage>[gitflow] Start hotfix {}</hotfixStartMessage>
-						<hotfixFinishMessage>[gitflow] Finish hotfix {}</hotfixFinishMessage>
-						<releaseStartMessage>[gitflow] Start release {}</releaseStartMessage>
-						<releaseFinishMessage>[gitflow] Finish release {}</releaseFinishMessage>
-						<tagHotfixMessage>[gitflow] Tag hotfix {}</tagHotfixMessage>
-						<tagReleaseMessage>[gitflow] Tag release {}</tagReleaseMessage>
-					</commitMessages>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
