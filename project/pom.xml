@@ -48,6 +48,7 @@
 		<maven.it.testTimeout>${testTimeout}</maven.it.testTimeout>
 		<maven.it.source>${project.build.testSourceDirectory}</maven.it.source>
 		<maven.javadoc.skip>true</maven.javadoc.skip>
+		<gpg.skip>true</gpg.skip>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<!-- http://maven.apache.org/pom.html performRelease -->
 		<!-- mvn versions:display-plugin-updates -Pjacoco,jmeter,cargo,it,sources -->
