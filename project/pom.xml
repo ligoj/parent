@@ -37,9 +37,12 @@
 		<maven.ut.reuseForks>true</maven.ut.reuseForks>
 		<maven.ut.forkCount>1</maven.ut.forkCount>
 		<maven.ut.testTimeout>${testTimeout}</maven.ut.testTimeout>
+		<skipTests>false</skipTests>
+		<maven.ut.skip>${skipTests}</maven.ut.skip>
 		<maven.it.argLine.memory>-Xms800m -Xmx800m</maven.it.argLine.memory>
 		<maven.it.argLine>${maven.it.argLine.memory}</maven.it.argLine>
-		<maven.it.skip>true</maven.it.skip>
+		<skipITs>true</skipITs>
+		<maven.it.skip>${skipITs}</maven.it.skip>
 		<maven.it.reuseForks>false</maven.it.reuseForks>
 		<maven.it.forkCount>1</maven.it.forkCount>
 		<maven.it.testTimeout>${testTimeout}</maven.it.testTimeout>
@@ -269,7 +272,9 @@
 					<version>${plugin.surefire}</version>
 					<configuration>
 						<argLine>${maven.ut.argLine}</argLine>
+						<failIfNoTests>false</failIfNoTests>
 						<testFailureIgnore>true</testFailureIgnore>
+						<skipTests>${maven.ut.skip}</skipTests>
 						<redirectTestOutputToFile>true</redirectTestOutputToFile>
 						<reuseForks>${maven.ut.reuseForks}</reuseForks>
 						<forkCount>${maven.ut.forkCount}</forkCount>
@@ -294,6 +299,9 @@
 						<forkedProcessTimeoutInSeconds>${maven.it.testTimeout}</forkedProcessTimeoutInSeconds>
 						<runOrder>alphabetical</runOrder>
 						<testSourceDirectory>${maven.it.source}</testSourceDirectory>
+						<excludes>
+							<exclude>**/Abstract*</exclude>
+						</excludes>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -598,21 +606,6 @@
 							<version>${plugin.jacoco}</version>
 							<executions>
 								<execution>
-									<phase>pre-integration-test</phase>
-									<goals>
-										<goal>prepare-agent-integration</goal>
-									</goals>
-									<configuration>
-										<output>file</output>
-										<append>true</append>
-										<propertyName>plugin.jacoco.it.argLine</propertyName>
-										<destFile>${plugin.jacoco.it.destFile}</destFile>
-										<includes>
-											<include>${plugin.jacoco.include}</include>
-										</includes>
-									</configuration>
-								</execution>
-								<execution>
 									<id>agent-cargo</id>
 									<phase>pre-integration-test</phase>
 									<goals>
@@ -629,7 +622,23 @@
 									</configuration>
 								</execution>
 								<execution>
-									<id>agent-unit</id>
+									<id>agent-it</id>
+									<phase>pre-integration-test</phase>
+									<goals>
+										<goal>prepare-agent-integration</goal>
+									</goals>
+									<configuration>
+										<output>file</output>
+										<append>true</append>
+										<propertyName>plugin.jacoco.it.argLine</propertyName>
+										<destFile>${plugin.jacoco.it.destFile}</destFile>
+										<includes>
+											<include>${plugin.jacoco.include}</include>
+										</includes>
+									</configuration>
+								</execution>
+								<execution>
+									<id>agent-ut</id>
 									<phase>process-test-classes</phase>
 									<goals>
 										<goal>prepare-agent</goal>
