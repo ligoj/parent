@@ -49,21 +49,21 @@ Plugin | Version property | Skip property | Profile
 [org.sonarsource.scanner.maven:sonar-maven-plugin](https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin) | plugin.sonar | |
 
 ### Sample Usage
-`mvn package -Pjacoco,sources`
+`mvn -Pjacoco,sources`
 
-Run UTs with enabled coverage, produce `target\jacoco.exec`, produce `target\project-x.x.x.jar` with the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
+Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\project-x.x.x.jar` with the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 
 #### Switch to a specific plugin version
 `mvn -Dplugin.clean=3.0.0 -Dplugin.compiler=3.6.1`
 
-#### Run ITs but not UTs on deploy goal
+#### Run ITs but not UTs
 `mvn -Dmaven.ut.skip=true`
 `mvn -DskipITs=true`
 
-#### Run UTs but not ITs on deploy goal
+#### Run UTs but not ITs
 `mvn -Dmaven.it.skip=true`
 
-#### Skip all tests on deploy goal
+#### Skip all tests
 `mvn -Dmaven.it.skip=true`
 `mvn -DskipTests=true`
 
