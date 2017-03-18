@@ -1,9 +1,9 @@
-# :link: ligoj parent
-Parent POM to get rid off all maven issues and reproduces the builds on any seat.
+# :link: Universal parent
+Parent POM to get rid off all [Maven](https://maven.apache.org/index.html) issues and to reproduce the builds on any seat.
 
 This a POM with tuned Maven configurations :
 - All versions are fixed in properties for all plugins : the builds are always reproductible
-- Preconfigured untit/integration tests and code coverage with Jacoco
+- Preconfigured untit/integration tests and code coverage with [Jacoco](http://www.eclemma.org/jacoco/)
 - Consistent encoding setting
 - Preconfigured JAR/EAR/WAR for buildnumber and version in `MANIFEST.MF`
 
@@ -49,26 +49,45 @@ Plugin | Version property | Skip property | Profile
 [org.sonarsource.scanner.maven:sonar-maven-plugin](https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin) | plugin.sonar | |
 
 ### Sample Usage
-`mvn package -Pjacoco,sourcess`
+`mvn package -Pjacoco,sources`
 
 Run UTs with enabled coverage, produce `target\jacoco.exec`, produce `target\project-x.x.x.jar` with the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 
-#### Switch a specific plugin version
+#### Switch to a specific plugin version
 `mvn -Dplugin.clean=3.0.0 -Dplugin.compiler=3.6.1`
 
-#### Run IT but not UT on deploy goal
+#### Run ITs but not UTs on deploy goal
 `mvn -Dmaven.ut.skip=true`
 `mvn -DskipITs=true`
 
-#### Run UT but not IT on deploy goal
+#### Run UTs but not ITs on deploy goal
 `mvn -Dmaven.it.skip=true`
 
 #### Skip all tests on deploy goal
 `mvn -Dmaven.it.skip=true`
 `mvn -DskipTests=true`
 
-#### Manage the fork mode and other options for IT and UT
-`mvn -Dmaven.ut.forkCount=2 -Dmaven.ut.reuseForks=false -Dmaven.ut.argLine.memory="-Xmx512m" -Dmaven.it.argLine.memory="-Xms400m -Xmx1600m" -Dmaven.it.testTimeout=600`
+#### Manage the fork mode and other options for ITs and UTs
+`mvn -Dmaven.ut.forkCount=2 -Dmaven.ut.reuseForks=true -Dmaven.ut.argLine.memory="-Xmx512m" -Dmaven.it.reuseForks=false -Dmaven.it.argLine.memory="-Xms400m -Xmx1600m" -Dmaven.it.testTimeout=600`
 
 #### Prerequisites
 `mvn -Dmaven.version=3.3.3 -Djdk.version=1.8`
+
+### Available sub parents
+#### Maven Plugin project
+```xml
+	<parent>
+		<groupId>org.ligoj.parent</groupId>
+		<artifactId>maven-plugin</artifactId>
+		<version>4.5.2</version>
+		<relativePath />
+	</parent>
+```
+#### SonarQube PLugin project
+```xml
+	<parent>
+		<groupId>org.ligoj.parent</groupId>
+		<artifactId>sonar-plugin</artifactId>
+		<version>4.5.2</version>
+		<relativePath />
+	</parent>
