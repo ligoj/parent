@@ -28,7 +28,7 @@ Plugin | Version property | Skip property | Profile
 [org.apache.maven.plugins:maven-failsafe-plugin](http://maven.apache.org/surefire/maven-failsafe-plugin) | plug.failsafe | maven.it.skip skipITs [true] | it
 [org.apache.maven.plugins:maven-gpg-plugin](https://maven.apache.org/plugins/maven-gpg-plugin) | plugin.gpg | gpg.skip [true] |
 [org.apache.maven.plugins:maven-project-info-reports-plugin](https://maven.apache.org/plugins/maven-project-info-reports-plugin) | plugin.install | |
-[maven.apache.org/plugins:maven-project-info-reports-plugin](https://maven.apache.org/plugins/maven-antrun-plugin) | plugin.info | |
+[org.apache.maven.plugins:plugins:maven-project-info-reports-plugin](https://maven.apache.org/plugins/maven-antrun-plugin) | plugin.info | |
 [org.apache.maven.plugins:maven-jar-plugin](https://maven.apache.org/plugins/maven-jar-plugin) | plugin.jar | |
 [org.apache.maven.plugins:maven-javadoc-plugin](https://maven.apache.org/plugins/maven-javadoc-plugin)  | plugin.javadoc | maven.javadoc.skip [true] | javadoc
 [org.apache.maven.plugins:maven-release-plugin](https://maven.apache.org/plugins/maven-release-plugin) | plugin.release | |
@@ -47,6 +47,7 @@ Plugin | Version property | Skip property | Profile
 [org.jacoco:jacoco-maven-plugin](https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin) | plugin.jacoco | | jacoco
 [org.sonarsource.java:sonar-jacoco-listeners](https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners) | plugin.jacoco.listeners | | jacoco
 [org.sonarsource.scanner.maven:sonar-maven-plugin](https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin) | plugin.sonar | |
+[com.amashchenko.maven.plugin:gitflow-maven-plugin](https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin) | plugin.gitflow | |
 
 ### Sample Usage
 `mvn -Pjacoco,sources`
