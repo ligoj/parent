@@ -70,6 +70,7 @@
 		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
 		<plugin.install>2.5.2</plugin.install>                  <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
 		<plugin.info>2.9</plugin.info>                          <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
+		<plugin.javadoc>2.10.4</plugin.javadoc>                 <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-info.html -->
 		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
 		<plugin.resources>3.0.2</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
 		<plugin.scm>1.9.5</plugin.scm>                          <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
@@ -82,7 +83,6 @@
 		<plugin.compiler>3.6.1</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
 		<plugin.jar>3.0.2</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
 		<plugin.war>3.0.0</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
-		<plugin.javadoc>2.10.4</plugin.javadoc>                 <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/project-info.html -->
 		<plugin.gitflow>2.0.0</plugin.gitflow>
 		<plugin.coveralls>4.3.0</plugin.coveralls>              <!-- https://github.com/trautonen/coveralls-maven-plugin -->
 		<jar.selenium>2.53.1</jar.selenium>                     <!-- http://docs.seleniumhq.org/download/ -->
@@ -158,6 +158,18 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>${plugin.javadoc}</version>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+							<configuration>
+								<additionalparam>-Xdoclint:none</additionalparam>
+								<failOnError>false</failOnError>
+							</configuration>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.eluder.coveralls</groupId>
@@ -539,6 +551,9 @@
 		</profile>
 		<profile>
 			<id>javadoc</id>
+			<properties>
+				<maven.javadoc.skip>false</maven.javadoc.skip>	
+			</properties>
 			<build>
 				<plugins>
 					<plugin>
