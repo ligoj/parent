@@ -185,6 +185,9 @@
 					<groupId>org.eluder.coveralls</groupId>
 					<artifactId>coveralls-maven-plugin</artifactId>
 					<version>${plugin.coveralls}</version>
+					<configuration>
+						<timestampFormat>EpochMillis</timestampFormat>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
