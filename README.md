@@ -1,6 +1,5 @@
-# :link: Universal parent
+# :link: Universal parent [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root)
 Parent POM to get rid off all [Maven](https://maven.apache.org/index.html) issues and to reproduce the builds on any seat.
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root)
 
 This a POM with tuned Maven configurations :
 - All versions are fixed in properties for all plugins : the builds are always reproductible
