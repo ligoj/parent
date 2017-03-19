@@ -1,13 +1,17 @@
 # :link: Universal parent [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root)
-Parent POM to get rid off all [Maven](https://maven.apache.org/index.html) issues and to reproduce the builds on any seat.
+Parent POM to get rid of all [Maven](https://maven.apache.org/index.html) issues and to reproduce the builds on any seat.
 
-This a POM with tuned Maven configurations :
-- All versions are fixed in properties for all plugins : the builds are always reproductible
-- Preconfigured untit/integration tests and code coverage with [Jacoco](http://www.eclemma.org/jacoco/)
+[![CircleCI](https://img.shields.io/circleci/project/github/ligoj/parent.svg)]()
+[![Build Status](https://semaphoreci.com/api/v1/ligoj/parent/branches/master/shields_badge.svg)](https://semaphoreci.com/ligoj/parent)
+[![Build Status](https://travis-ci.org/ligoj/bootstrap.svg?branch=master)](https://travis-ci.org/ligoj/bootstrap)
+
+This is a POM with tuned Maven configurations:
+- All versions are fixed in properties for all plugins: the builds are always reproducible
+- Preconfigured unit/integration tests and code coverage with [Jacoco](http://www.eclemma.org/jacoco/)
 - Consistent encoding setting
-- Preconfigured JAR/EAR/WAR for buildnumber and version in `MANIFEST.MF`
+- Preconfigured JAR/EAR/WAR for [build number](https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin) and version in `MANIFEST.MF`
 
-To benefit these features add this parent to your `pom.xml`
+To benefit these features, add this parent to your `pom.xml`
 ```xml
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
