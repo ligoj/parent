@@ -1,9 +1,12 @@
 # :link: Universal parent [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root)
 Parent POM to get rid of all [Maven](https://maven.apache.org/index.html) issues and to reproduce the builds on any seat.
 
-[![CircleCI](https://img.shields.io/circleci/project/github/ligoj/parent.svg)]()
+[![Build status](https://circleci.com/gh/ligoj/parent.svg?style=svg)](https://circleci.com/gh/ligoj/parent)
 [![Build Status](https://semaphoreci.com/api/v1/ligoj/parent/branches/master/shields_badge.svg)](https://semaphoreci.com/ligoj/parent)
 [![Build Status](https://travis-ci.org/ligoj/bootstrap.svg?branch=master)](https://travis-ci.org/ligoj/bootstrap)
+[![Build status](https://codeship.com/projects/3b719b10-eeee-0134-6d5c-62b847b8d86d/status?branch=master)](https://codeship.com/projects/208746)
+[![Build status](https://ci.appveyor.com/api/projects/status/m1lf4f6q488cdooo/branch/master?svg=true)](https://ci.appveyor.com/project/ligoj/parent/branch/master)
+
 
 This is a POM with tuned Maven configurations:
 - All versions are fixed in properties for all plugins: the builds are always reproducible
