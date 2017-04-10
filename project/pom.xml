@@ -670,6 +670,24 @@
 										<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
 									</configuration>
 								</execution>
+								<execution>
+									<id>report-ut</id>
+									<goals>
+										<goal>report</goal>
+									</goals>
+									<configuration>
+										<dataFile>${plugin.jacoco.ut.destFile}</dataFile>
+									</configuration>
+								</execution>
+								<execution>
+									<id>report-it</id>
+									<goals>
+										<goal>report</goal>
+									</goals>
+									<configuration>
+										<dataFile>${plugin.jacoco.it.destFile}</dataFile>
+									</configuration>
+								</execution>
 							</executions>
 						</plugin>
 						<plugin>
