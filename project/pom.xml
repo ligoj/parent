@@ -63,7 +63,7 @@
 		<plugin.deploy>2.8.2</plugin.deploy>                    <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
 		<plugin.ear>2.10.1</plugin.ear>                         <!-- http://maven.apache.org/plugins/maven-ear-plugin/project-summary.html -->
 		<plugin.enforcer>1.4.1</plugin.enforcer>                <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
-		<plugin.failsafe>2.19.1</plugin.failsafe>               <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
+		<plugin.failsafe>2.20</plugin.failsafe>                 <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
 		<plugin.gitflow>1.4.1</plugin.gitflow>                  <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
 		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
 		<plugin.install>2.5.2</plugin.install>                  <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
