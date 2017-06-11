@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ligoj.parent</groupId>
 	<artifactId>project</artifactId>
-	<version>4.5.3-SNAPSHOT</version>
+	<version>4.6.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Parent - Project</name>
 	<description>Parent defining top level global configuration of forge.</description>
@@ -19,7 +20,7 @@
 		<domain.name>github.com</domain.name>
 		<scm.server>https://${domain.name}</scm.server>
 		<scm.server.anonymous>${scm.server}</scm.server.anonymous>
-		<copyright.year>2017</copyright.year>
+		<copyright.year>2018</copyright.year>
 		<ci.server>https://${domain.name}/jenkins/</ci.server>
 		<JENKINS_URL>${ci.server}</JENKINS_URL>
 		<WORKSPACE>${project.build.directory}</WORKSPACE>
@@ -31,7 +32,7 @@
 		<encoding.java>${project.build.sourceEncoding}</encoding.java>
 		<test.target.server.hostname>localhost</test.target.server.hostname>
 		<jar.ant>1.9.4</jar.ant>
-		<maven.version>3.3.3</maven.version>
+		<maven.version>3.5.0</maven.version>
 		<maven.ut.argLine.memory>-Xms800m -Xmx800m</maven.ut.argLine.memory>
 		<maven.ut.argLine>${maven.ut.argLine.memory}</maven.ut.argLine>
 		<maven.ut.reuseForks>true</maven.ut.reuseForks>
@@ -56,42 +57,43 @@
 		<!-- apache.org plugins -->
 		<maven.build.date>${maven.build.timestamp}</maven.build.date>
 		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
-		<plugin.assembly>3.0.0</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
+		<plugin.assembly>3.1.0</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
 		<plugin.clean>3.0.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
-		<plugin.compiler>3.6.1</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
-		<plugin.dependency>3.0.0</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
+		<plugin.compiler>3.7.0</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
+		<plugin.dependency>3.0.2</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
 		<plugin.deploy>2.8.2</plugin.deploy>                    <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
 		<plugin.ear>2.10.1</plugin.ear>                         <!-- http://maven.apache.org/plugins/maven-ear-plugin/project-summary.html -->
-		<plugin.enforcer>1.4.1</plugin.enforcer>                <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
-		<plugin.failsafe>2.20</plugin.failsafe>                 <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
+		<plugin.enforcer>3.0.0-M1</plugin.enforcer>             <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
+		<plugin.failsafe>2.19.1</plugin.failsafe>               <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
 		<plugin.gitflow>1.4.1</plugin.gitflow>                  <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
 		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
 		<plugin.install>2.5.2</plugin.install>                  <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
 		<plugin.info>2.9</plugin.info>                          <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
 		<plugin.jar>3.0.2</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
-		<plugin.javadoc>2.10.4</plugin.javadoc>                 <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-info.html -->
+		<plugin.javadoc>3.0.0</plugin.javadoc>                  <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-info.html -->
 		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
 		<plugin.resources>3.0.2</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
 		<plugin.scm>1.9.5</plugin.scm>                          <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
 		<plugin.source>3.0.1</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
-		<plugin.surefire>2.19.1</plugin.surefire>               <!-- http://maven.apache.org/plugins/maven-surefire-plugin/project-summary.html -->
+		<plugin.surefire>2.20.1</plugin.surefire>               <!-- http://maven.apache.org/plugins/maven-surefire-plugin/project-summary.html -->
 		<plugin.surefire.report>2.19.1</plugin.surefire.report> <!-- http://maven.apache.org/plugins/maven-surefire-report-plugin/project-summary.html -->
 		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
-		<plugin.war>3.0.0</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
+		<plugin.war>3.2.0</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
 
 		<!-- Non apache.org plugins -->
 		<plugin.build-helper>1.12</plugin.build-helper>              <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
 		<plugin.buildnumber>1.4</plugin.buildnumber>                 <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
-		<plugin.versions>2.3</plugin.versions>                       <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
+		<plugin.versions>2.5</plugin.versions>                       <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
 		<plugin.coveralls>4.3.0</plugin.coveralls>                   <!-- https://mvnrepository.com/artifact/org.eluder.coveralls/coveralls-maven-plugin -->
-		<plugin.dependency-check>1.4.5</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+		<plugin.dependency-check>3.1.0</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
 		<plugin.jacoco>0.7.9</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
 		<plugin.jacoco.listeners>4.10.0.10260</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
-		<plugin.sonar>3.2</plugin.sonar>                             <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+		<plugin.sonar>3.3.0.603</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
 		<jar.selenium>3.4.0</jar.selenium>                           <!-- http://docs.seleniumhq.org/download/ -->
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>9</jdk.version>
+		<jdk.release>9</jdk.release>
 		<testTimeout>1000</testTimeout>
 		<plugin.jacoco.ut.destFile>${project.build.directory}/jacoco.exec</plugin.jacoco.ut.destFile>
 		<plugin.jacoco.it.destFile>${project.build.directory}/jacoco-it.exec</plugin.jacoco.it.destFile>
@@ -103,9 +105,6 @@
 		<sonar.jacoco.itReportPath>${plugin.jacoco.it.destFile}</sonar.jacoco.itReportPath>
 		<sonar.jacoco.reportPaths>${plugin.jacoco.ut.destFile}, ${plugin.jacoco.it.destFile}</sonar.jacoco.reportPaths>
 	</properties>
-	<prerequisites>
-		<maven>${maven.version}</maven>
-	</prerequisites>
 	<scm>
 		<url>https://github.com/ligoj/parent</url>
 		<connection>scm:git:https://github.com/ligoj/parent.git</connection>
@@ -250,8 +249,23 @@
 					<configuration>
 						<source>${jdk.version}</source>
 						<target>${jdk.version}</target>
+						<release>${jdk.release}</release>
 						<encoding>${encoding.java}</encoding>
-						<compilerArgument>-Xlint:unchecked</compilerArgument>
+						<compilerArgs>
+							<arg>-Xlint:unchecked</arg>
+							<arg>-Xlint:deprecation</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
+						</compilerArgs>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -480,6 +494,19 @@
 				<artifactId>maven-enforcer-plugin</artifactId>
 				<executions>
 					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>${maven.version]</version>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+					<execution>
 						<id>enforce-java</id>
 						<goals>
 							<goal>enforce</goal>
@@ -487,7 +514,7 @@
 						<configuration>
 							<rules>
 								<requireJavaVersion>
-									<version>1.8.0</version>
+									<version>${jdk.version}</version>
 								</requireJavaVersion>
 							</rules>
 						</configuration>
@@ -566,7 +593,7 @@
 		<profile>
 			<id>javadoc</id>
 			<properties>
-				<maven.javadoc.skip>false</maven.javadoc.skip>	
+				<maven.javadoc.skip>false</maven.javadoc.skip>
 			</properties>
 			<build>
 				<plugins>
@@ -964,5 +991,6 @@
 				</plugins>
 			</build>
 		</profile>
+
 	</profiles>
 </project>

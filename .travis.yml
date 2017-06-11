@@ -8,7 +8,7 @@ cache:
     - $HOME/.m2/repository
     - $HOME/maven
 install: /bin/true 
-jdk: oraclejdk8
+jdk: oraclejdk9
 language: java
 notifications: 
   email: false
