@@ -5,7 +5,7 @@ function installMaven {
   echo "Setup Maven"
   mkdir -p ~/maven
   pushd ~/maven > /dev/null
-  if [ ! -d "apache-maven-3.5.2 ]; then
+  if [ ! -d "apache-maven-3.5.2" ]; then
     echo "Download Maven 3.5.2"
     curl -sSL http://apache.mirrors.ovh.net/ftp.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz | tar zx -C ~/maven
   fi
