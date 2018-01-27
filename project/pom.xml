@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ligoj.parent</groupId>
 	<artifactId>project</artifactId>
-	<version>4.6.0</version>
+	<version>4.6.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Parent - Project</name>
 	<description>Parent defining top level global configuration of forge.</description>
