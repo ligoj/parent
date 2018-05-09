@@ -55,12 +55,13 @@
 		<!-- mvn versions:display-plugin-updates -Pjacoco,jmeter,cargo,it,sources -->
 		<!-- plugin dependency versions -->
 		<!-- apache.org plugins -->
+		<!-- http://maven.apache.org/plugins/index.html -->
 		<maven.build.date>${maven.build.timestamp}</maven.build.date>
 		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
 		<plugin.assembly>3.1.0</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
 		<plugin.clean>3.0.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
 		<plugin.compiler>3.7.0</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
-		<plugin.dependency>3.0.2</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
+		<plugin.dependency>3.1.0</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
 		<plugin.deploy>2.8.2</plugin.deploy>                    <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
 		<plugin.ear>2.10.1</plugin.ear>                         <!-- http://maven.apache.org/plugins/maven-ear-plugin/project-summary.html -->
 		<plugin.enforcer>3.0.0-M1</plugin.enforcer>             <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
@@ -69,8 +70,8 @@
 		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
 		<plugin.install>2.5.2</plugin.install>                  <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
 		<plugin.info>2.9</plugin.info>                          <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
-		<plugin.jar>3.0.2</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
-		<plugin.javadoc>3.0.0</plugin.javadoc>                  <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-info.html -->
+		<plugin.jar>3.1.0</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
+		<plugin.javadoc>3.0.0</plugin.javadoc>                  <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-summary.html -->
 		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
 		<plugin.resources>3.1.0</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
 		<plugin.scm>1.9.5</plugin.scm>                          <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
