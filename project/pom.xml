@@ -92,7 +92,7 @@
 		<plugin.jacoco.listeners>4.10.0.10260</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
 		<plugin.sonar>3.3.0.603</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
-		<jar.selenium>3.4.0</jar.selenium>                           <!-- http://docs.seleniumhq.org/download/ -->
+		<jar.selenium>3.11.0</jar.selenium>                           <!-- http://docs.seleniumhq.org/download/ -->
 		<jdk.version>9</jdk.version>
 		<jdk.release>9</jdk.release>
 		<testTimeout>1000</testTimeout>
