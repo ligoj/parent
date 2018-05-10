@@ -18,6 +18,5 @@ function installMaven {
   export M2_HOME=~/maven/apache-maven-3.5.3
   export PATH=$M2_HOME/bin:$PATH
 }
-wget https://github.com/sormuras/bach/raw/master/install-jdk.sh && . ./install-jdk.sh -F 10 -L GPL
 installMaven
 mvn clean install -B -e -V
