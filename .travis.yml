@@ -8,12 +8,9 @@ cache:
   directories: 
     - $HOME/.m2/repository
     - $HOME/maven
-install: /bin/true 
-jdk: oraclejdk9
-matrix:
-  include:
-      - env: JDK='OpenJDK 10'
-        install: . ./install-jdk.sh -F 10 -L GPL
+env: 
+  - TARGET=BUILD JDK='OpenJDK 10'
+install: . ./install-jdk.sh -F 10 -L GPL
 language: java
 notifications: 
   email: false
