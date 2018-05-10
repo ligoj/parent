@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ligoj.parent</groupId>
 	<artifactId>project</artifactId>
-	<version>4.6.1-SNAPSHOT</version>
+	<version>10.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Parent - Project</name>
 	<description>Parent defining top level global configuration of forge.</description>
@@ -31,8 +32,7 @@
 		<encoding.javadoc>${encoding.java}</encoding.javadoc>
 		<encoding.java>${project.build.sourceEncoding}</encoding.java>
 		<test.target.server.hostname>localhost</test.target.server.hostname>
-		<jar.ant>1.9.4</jar.ant>
-		<maven.version>3.5.0</maven.version>
+		<maven.version>3.5.3</maven.version>
 		<maven.ut.argLine.memory>-Xms800m -Xmx800m</maven.ut.argLine.memory>
 		<maven.ut.argLine>${maven.ut.argLine.memory}</maven.ut.argLine>
 		<maven.ut.reuseForks>true</maven.ut.reuseForks>
@@ -49,7 +49,6 @@
 		<maven.it.testTimeout>${testTimeout}</maven.it.testTimeout>
 		<maven.it.source>${project.build.testSourceDirectory}</maven.it.source>
 		<maven.javadoc.skip>true</maven.javadoc.skip>
-		<gpg.skip>true</gpg.skip>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<!-- http://maven.apache.org/pom.html performRelease -->
 		<!-- mvn versions:display-plugin-updates -Pjacoco,jmeter,cargo,it,sources -->
@@ -76,8 +75,8 @@
 		<plugin.resources>3.1.0</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
 		<plugin.scm>1.9.5</plugin.scm>                          <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
 		<plugin.source>3.0.1</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
-		<plugin.surefire>2.20.1</plugin.surefire>               <!-- http://maven.apache.org/surefire/project-summary.html -->
-		<plugin.surefire.report>2.19.1</plugin.surefire.report> <!-- http://maven.apache.org/surefire/project-summary.html -->
+		<plugin.surefire>2.21.0</plugin.surefire>               <!-- http://maven.apache.org/surefire/project-summary.html -->
+		<plugin.surefire.report>2.21.0</plugin.surefire.report> <!-- http://maven.apache.org/surefire/project-summary.html -->
 		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
 		<plugin.war>3.2.0</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
 
@@ -92,9 +91,14 @@
 		<plugin.jacoco.listeners>4.10.0.10260</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
 		<plugin.sonar>3.3.0.603</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
-		<jar.selenium>3.11.0</jar.selenium>                           <!-- http://docs.seleniumhq.org/download/ -->
-		<jdk.version>9</jdk.version>
-		<jdk.release>9</jdk.release>
+		<selenium.version>3.11.0</selenium.version>                   <!-- http://docs.seleniumhq.org/download/ -->
+		<ant.version>1.10.3</ant.version>
+		<junit.platform.version>1.2.0</junit.platform.version>
+		<junit.jupiter.version>5.2.0</junit.jupiter.version>
+		<asm.version>6.1.1</asm.version>
+		<gpg.skip>true</gpg.skip>
+		<jdk.version>10</jdk.version>
+		<jdk.release>10</jdk.release>
 		<testTimeout>1000</testTimeout>
 		<plugin.jacoco.ut.destFile>${project.build.directory}/jacoco.exec</plugin.jacoco.ut.destFile>
 		<plugin.jacoco.it.destFile>${project.build.directory}/jacoco-it.exec</plugin.jacoco.it.destFile>
@@ -116,15 +120,13 @@
 			<email>fabrice.daugan@gmail.com</email>
 			<name>Fabrice Daugan</name>
 			<url>https://github.com/fabdouglas</url>
-			<organization>Gfi Informatique</organization>
-			<organizationUrl>http://www.gfi.fr</organizationUrl>
 			<id>fabdouglas</id>
 		</developer>
 	</developers>
 	<licenses>
 		<license>
 			<name>MIT License</name>
-			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<url>https://fabdouglas.mit-license.org/</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
@@ -156,7 +158,7 @@
 			<dependency>
 				<groupId>org.seleniumhq.selenium</groupId>
 				<artifactId>selenium-java</artifactId>
-				<version>${jar.selenium}</version>
+				<version>${selenium.version}</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
@@ -268,6 +270,18 @@
 							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
 						</compilerArgs>
 					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.junit.platform</groupId>
+							<artifactId>junit-platform-surefire-provider</artifactId>
+							<version>${junit.platform.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.ow2.asm</groupId>
+							<artifactId>asm</artifactId>
+							<version>${asm.version}</version>
+						</dependency>
+					</dependencies>
 				</plugin>
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
@@ -333,10 +347,14 @@
 					<artifactId>dependency-check-maven</artifactId>
 					<version>${plugin.dependency-check}</version>
 					<configuration>
-						<!-- <cveUrl12Modified>http://internal-mirror.mycorp.com/downloads/nist/nvdcve-modified.xml</cveUrl12Modified> <cveUrl20Modified>http://internal-mirror.mycorp.com/downloads/nist/nvdcve-2.0-modified.xml</cveUrl20Modified> 
-							<cveUrl12Base>http://internal-mirror.mycorp.com/downloads/nist/nvdcve-%d.xml</cveUrl12Base> <cveUrl20Base>http://internal-mirror.mycorp.com/downloads/nist/nvdcve-2.0-%d.xml</cveUrl20Base> 
-							<cveUrl12Modified>https://nvd.nist.gov/download/nvdcve-Modified.xml.gz</cveUrl12Modified> <cveUrl20Modified>https://nvd.nist.gov/feeds/xml/cve/nvdcve-2.0-Modified.xml.gz</cveUrl20Modified> 
-							<cveUrl12Base>https://nvd.nist.gov/download/nvdcve-%d.xml.gz</cveUrl12Base> <cveUrl20Base>https://nvd.nist.gov/feeds/xml/cve/nvdcve-2.0-%d.xml.gz</cveUrl20Base> -->
+						<!-- <cveUrl12Modified>http://internal-mirror.mycorp.com/downloads/nist/nvdcve-modified.xml</cveUrl12Modified> 
+							<cveUrl20Modified>http://internal-mirror.mycorp.com/downloads/nist/nvdcve-2.0-modified.xml</cveUrl20Modified> 
+							<cveUrl12Base>http://internal-mirror.mycorp.com/downloads/nist/nvdcve-%d.xml</cveUrl12Base> 
+							<cveUrl20Base>http://internal-mirror.mycorp.com/downloads/nist/nvdcve-2.0-%d.xml</cveUrl20Base> 
+							<cveUrl12Modified>https://nvd.nist.gov/download/nvdcve-Modified.xml.gz</cveUrl12Modified> 
+							<cveUrl20Modified>https://nvd.nist.gov/feeds/xml/cve/nvdcve-2.0-Modified.xml.gz</cveUrl20Modified> 
+							<cveUrl12Base>https://nvd.nist.gov/download/nvdcve-%d.xml.gz</cveUrl12Base> 
+							<cveUrl20Base>https://nvd.nist.gov/feeds/xml/cve/nvdcve-2.0-%d.xml.gz</cveUrl20Base> -->
 						<format>XML</format>
 						<name>dependency-check</name>
 						<outputDirectory>${WORKSPACE}</outputDirectory>
@@ -432,17 +450,17 @@
 						<dependency>
 							<groupId>org.apache.ant</groupId>
 							<artifactId>ant-junit</artifactId>
-							<version>${jar.ant}</version>
+							<version>${ant.version}</version>
 						</dependency>
 						<dependency>
 							<groupId>org.apache.ant</groupId>
 							<artifactId>ant</artifactId>
-							<version>${jar.ant}</version>
+							<version>${ant.version}</version>
 						</dependency>
 						<dependency>
 							<groupId>org.apache.ant</groupId>
 							<artifactId>ant-jsch</artifactId>
-							<version>${jar.ant}</version>
+							<version>${ant.version}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -731,6 +749,18 @@
 									</property>
 								</properties>
 							</configuration>
+							<dependencies>
+								<dependency>
+									<groupId>org.junit.platform</groupId>
+									<artifactId>junit-platform-surefire-provider</artifactId>
+									<version>${junit.platform.version}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.ow2.asm</groupId>
+									<artifactId>asm</artifactId>
+									<version>${asm.version}</version> <!-- Use newer version of ASM -->
+								</dependency>
+							</dependencies>
 						</plugin>
 						<plugin>
 							<artifactId>maven-failsafe-plugin</artifactId>
@@ -744,6 +774,18 @@
 									</property>
 								</properties>
 							</configuration>
+							<dependencies>
+								<dependency>
+									<groupId>org.junit.platform</groupId>
+									<artifactId>junit-platform-surefire-provider</artifactId>
+									<version>${junit.platform.version}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.ow2.asm</groupId>
+									<artifactId>asm</artifactId>
+									<version>${asm.version}</version> <!-- Use newer version of ASM -->
+								</dependency>
+							</dependencies>
 						</plugin>
 					</plugins>
 				</pluginManagement>
