@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ligoj.parent</groupId>
 	<artifactId>project</artifactId>
-	<version>10.0.2-SNAPSHOT</version>
+	<version>10.0.2</version>
 	<packaging>pom</packaging>
 	<name>Parent - Project</name>
 	<description>Parent defining top level global configuration of forge.</description>
@@ -88,7 +88,7 @@
 		<plugin.coveralls>4.3.0</plugin.coveralls>                   <!-- https://mvnrepository.com/artifact/org.eluder.coveralls/coveralls-maven-plugin -->
 		<plugin.dependency-check>3.1.0</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
 		<plugin.jacoco>0.8.1</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-		<plugin.jacoco.listeners>4.10.0.2-SNAPSHOT0260</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
+		<plugin.jacoco.listeners>4.10.0.20260</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
 		<plugin.sonar>3.3.0.603</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
 		<selenium.version>3.11.0</selenium.version>                   <!-- http://docs.seleniumhq.org/download/ -->
@@ -250,6 +250,10 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>${plugin.compiler}</version>
 					<configuration>
+						<source>${jdk.version}</source>
+						<target>${jdk.version}</target>
+						<release>${jdk.release}</release>
+						<encoding>${encoding.java}</encoding>
 						<compilerArgs>
 							<arg>-Xlint:all,-options,-path</arg>
 							<arg>-parameters</arg>
