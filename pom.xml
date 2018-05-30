@@ -8,6 +8,11 @@
 		<version>10.0.4-SNAPSHOT</version>
 		<relativePath>project/pom.xml</relativePath>
 	</parent>
+	<ciManagement>
+		<system>Travis</system>
+		<url>https://travis-ci.org/ligoj/parent/</url>
+		<notifiers />
+	</ciManagement>
 
 	<artifactId>root</artifactId>
 	<packaging>pom</packaging>
