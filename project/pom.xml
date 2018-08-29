@@ -59,27 +59,27 @@
 		<maven.build.date>${maven.build.timestamp}</maven.build.date>
 		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
 		<plugin.assembly>3.1.0</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
-		<plugin.clean>3.0.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
-		<plugin.compiler>3.7.0</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
-		<plugin.dependency>3.1.0</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
+		<plugin.clean>3.1.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
+		<plugin.compiler>3.8.0</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
+		<plugin.dependency>3.1.1</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
 		<plugin.deploy>2.8.2</plugin.deploy>                    <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
 		<plugin.ear>2.10.1</plugin.ear>                         <!-- http://maven.apache.org/plugins/maven-ear-plugin/project-summary.html -->
 		<plugin.enforcer>3.0.0-M1</plugin.enforcer>             <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
-		<plugin.failsafe>2.21.0</plugin.failsafe>               <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
+		<plugin.failsafe>2.22.0</plugin.failsafe>               <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
 		<plugin.gitflow>1.4.1</plugin.gitflow>                  <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
 		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
 		<plugin.install>2.5.2</plugin.install>                  <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
-		<plugin.info>2.9</plugin.info>                          <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
+		<plugin.info>3.0.0</plugin.info>                        <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
 		<plugin.jar>3.1.0</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
-		<plugin.javadoc>3.0.0</plugin.javadoc>                  <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-summary.html -->
+		<plugin.javadoc>3.0.1</plugin.javadoc>                  <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-summary.html -->
 		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
 		<plugin.resources>3.1.0</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
-		<plugin.scm>1.9.5</plugin.scm>                          <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
+		<plugin.scm>1.10.0</plugin.scm>                         <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
 		<plugin.source>3.0.1</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
-		<plugin.surefire>2.21.0</plugin.surefire>               <!-- http://maven.apache.org/surefire/project-summary.html -->
-		<plugin.surefire.report>2.21.0</plugin.surefire.report> <!-- http://maven.apache.org/surefire/project-summary.html -->
+		<plugin.surefire>2.22.0</plugin.surefire>               <!-- http://maven.apache.org/surefire/project-summary.html -->
+		<plugin.surefire.report>2.22.0</plugin.surefire.report> <!-- http://maven.apache.org/surefire/project-summary.html -->
 		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
-		<plugin.war>3.2.0</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
+		<plugin.war>3.2.2</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
 
 		<!-- Non apache.org plugins -->
 		<plugin.build-helper>1.12</plugin.build-helper>              <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
@@ -87,16 +87,16 @@
 		<plugin.versions>2.5</plugin.versions>                       <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
 		<plugin.coveralls>4.3.0</plugin.coveralls>                   <!-- https://mvnrepository.com/artifact/org.eluder.coveralls/coveralls-maven-plugin -->
-		<plugin.dependency-check>3.1.0</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
-		<plugin.jacoco>0.8.1</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-		<plugin.jacoco.listeners>5.3.0.13828</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
-		<plugin.sonar>3.3.0.603</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+		<plugin.dependency-check>3.3.1</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+		<plugin.jacoco>0.8.2</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+		<plugin.jacoco.listeners>5.7.0.15470</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
+		<plugin.sonar>3.4.1.1170</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
 		<selenium.version>3.11.0</selenium.version>                   <!-- http://docs.seleniumhq.org/download/ -->
 		<ant.version>1.10.3</ant.version>
 		<junit.platform.version>1.2.0</junit.platform.version>
 		<junit.jupiter.version>5.2.0</junit.jupiter.version>
-		<asm.version>6.1.1</asm.version>
+		<asm.version>6.2.1</asm.version>
 		<gpg.skip>true</gpg.skip>
 		<jdk.version>10</jdk.version>
 		<jdk.release>10</jdk.release>
