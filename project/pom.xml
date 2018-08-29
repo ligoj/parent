@@ -16,7 +16,7 @@
 		<url>https://github.com/ligoj</url>
 	</organization>
 	<properties>
-		<revision>10.0.5-SNAPSHOT</revision>
+		<revision>10.0.5</revision>
 		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
