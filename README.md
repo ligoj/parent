@@ -3,7 +3,6 @@ Parent POM to get rid of all [Maven](https://maven.apache.org/index.html) issues
 
 [![Build Status](https://travis-ci.org/ligoj/parent.svg?branch=master)](https://travis-ci.org/ligoj/parent)
 [![Build Status](https://circleci.com/gh/ligoj/parent.svg?style=svg)](https://circleci.com/gh/ligoj/parent)
-[![Build Status](https://codeship.com/projects/3b719b10-eeee-0134-6d5c-62b847b8d86d/status?branch=master)](https://codeship.com/projects/208746)
 [![Build Status](https://semaphoreci.com/api/v1/ligoj/parent/branches/master/shields_badge.svg)](https://semaphoreci.com/ligoj/parent)
 [![Build Status](https://ci.appveyor.com/api/projects/status/m1lf4f6q488cdooo/branch/master?svg=true)](https://ci.appveyor.com/project/ligoj/parent/branch/master)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://gus.mit-license.org/)
