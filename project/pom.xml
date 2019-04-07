@@ -16,7 +16,7 @@
 		<url>https://github.com/ligoj</url>
 	</organization>
 	<properties>
-		<revision>11.0.1-SNAPSHOT</revision>
+		<revision>11.0.1</revision>
 		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
@@ -57,7 +57,7 @@
 		<!-- apache.org plugins -->
 		<!-- http://maven.apache.org/plugins/index.html -->
 		<maven.build.date>${maven.build.timestamp}</maven.build.date>
-		
+
 		<!-- https://maven.apache.org/plugins/index.html -->
 		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
 		<plugin.assembly>3.1.1</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
@@ -76,6 +76,7 @@
 		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
 		<plugin.resources>3.1.0</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
 		<plugin.scm>1.11.2</plugin.scm>                         <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
+		<plugin.site>3.7.1</plugin.site>                        <!-- https://maven.apache.org/plugins/maven-site-plugin/site-mojo.html -->
 		<plugin.source>3.0.1</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
 		<plugin.surefire>3.0.0-M3</plugin.surefire>             <!-- http://maven.apache.org/surefire/project-summary.html -->
 		<plugin.surefire.report>3.0.0-M3</plugin.surefire.report><!--http://maven.apache.org/surefire/project-summary.html -->
@@ -95,7 +96,7 @@
 
 		<selenium.version>3.11.0</selenium.version>                   <!-- http://docs.seleniumhq.org/download/ -->
 		<ant.version>1.10.3</ant.version>
-		<junit.platform.version>1.4.1</junit.platform.version>
+		<junit.platform.version>1.3.2</junit.platform.version>
 		<junit.jupiter.version>5.4.1</junit.jupiter.version>
 		<asm.version>7.1</asm.version>
 		<gpg.skip>true</gpg.skip>
@@ -172,6 +173,11 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${plugin.site}</version>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
@@ -369,6 +375,34 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
 					<version>${plugin.enforcer}</version>
+					<executions>
+						<execution>
+							<id>enforce-maven</id>
+							<goals>
+								<goal>enforce</goal>
+							</goals>
+							<configuration>
+								<rules>
+									<requireMavenVersion>
+										<version>${maven.version}</version>
+									</requireMavenVersion>
+								</rules>
+							</configuration>
+						</execution>
+						<execution>
+							<id>enforce-java</id>
+							<goals>
+								<goal>enforce</goal>
+							</goals>
+							<configuration>
+								<rules>
+									<requireJavaVersion>
+										<version>${jdk.version}</version>
+									</requireJavaVersion>
+								</rules>
+							</configuration>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.owasp</groupId>
@@ -539,34 +573,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>enforce-maven</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireMavenVersion>
-									<version>${maven.version]</version>
-								</requireMavenVersion>
-							</rules>
-						</configuration>
-					</execution>
-					<execution>
-						<id>enforce-java</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireJavaVersion>
-									<version>${jdk.version}</version>
-								</requireJavaVersion>
-							</rules>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
