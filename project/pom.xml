@@ -16,7 +16,7 @@
 		<url>https://github.com/ligoj</url>
 	</organization>
 	<properties>
-		<revision>11.0.2-SNAPSHOT</revision>
+		<revision>11.0.2</revision>
 		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
@@ -96,7 +96,8 @@
 
 		<selenium.version>3.11.0</selenium.version>                   <!-- http://docs.seleniumhq.org/download/ -->
 		<ant.version>1.10.3</ant.version>
-		<junit.platform.version>1.3.2</junit.platform.version>
+		<junit.platform.version>1.4.1</junit.platform.version>
+		<junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
 		<junit.jupiter.version>5.4.1</junit.jupiter.version>
 		<asm.version>7.1</asm.version>
 		<gpg.skip>true</gpg.skip>
@@ -269,7 +270,7 @@
 						<dependency>
 							<groupId>org.junit.platform</groupId>
 							<artifactId>junit-platform-surefire-provider</artifactId>
-							<version>${junit.platform.version}</version>
+							<version>${junit.platform.surefire.version}</version>
 						</dependency>
 						<dependency>
 							<groupId>org.junit.jupiter</groupId>
