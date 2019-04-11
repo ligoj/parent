@@ -1,5 +1,12 @@
-/maven-plugin/target
-/project/target
-/sonar-plugin/target
+**/.DS_Store
+.project
+.settings
+**/.settings
+**/.project
 /target
-/.project
+/*/target
+**/.classpath
+/*.exec
+**/*.iml
+**/org.eclipse.wst.validation.prefs
+**/org.eclipse.wst.common.component
