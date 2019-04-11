@@ -16,7 +16,7 @@
 		<url>https://github.com/ligoj</url>
 	</organization>
 	<properties>
-		<revision>11.0.5-SNAPSHOT</revision>
+		<revision>11.0.5</revision>
 		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
@@ -358,7 +358,7 @@
 						<dependency>
 							<groupId>org.junit.platform</groupId>
 							<artifactId>junit-platform-surefire-provider</artifactId>
-							<version>${junit-platform-surefire-provider}</version>
+							<version>${junit.platform.surefire.version}</version>
 						</dependency>
 						<dependency>
 							<groupId>org.junit.jupiter</groupId>
@@ -788,7 +788,7 @@
 								<dependency>
 									<groupId>org.junit.platform</groupId>
 									<artifactId>junit-platform-surefire-provider</artifactId>
-									<version>${junit.platform.version}</version>
+									<version>${junit.platform.surefire.version}</version>
 								</dependency>
 								<dependency>
 									<groupId>org.junit.jupiter</groupId>
@@ -818,7 +818,7 @@
 								<dependency>
 									<groupId>org.junit.platform</groupId>
 									<artifactId>junit-platform-surefire-provider</artifactId>
-									<version>${junit.platform.version}</version>
+									<version>${junit.platform.surefire.version}</version>
 								</dependency>
 								<dependency>
 									<groupId>org.junit.jupiter</groupId>
