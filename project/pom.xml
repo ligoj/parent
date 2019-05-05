@@ -62,7 +62,7 @@
 		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
 		<plugin.assembly>3.1.1</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
 		<plugin.clean>3.1.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
-		<plugin.compiler>3.8.0</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
+		<plugin.compiler>3.8.1</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
 		<plugin.dependency>3.1.1</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
 		<plugin.deploy>3.0.0-M1</plugin.deploy>                 <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
 		<plugin.enforcer>3.0.0-M2</plugin.enforcer>             <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
@@ -264,6 +264,7 @@
 							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
 							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
 							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
+							<arg>-J-Duser.language=en_us</arg>
 						</compilerArgs>
 					</configuration>
 					<dependencies>
