@@ -13,7 +13,7 @@
 	<url>https://github.com/ligoj/parent</url>
 	<organization>
 		<name>Ligoj</name>
-		<url>https://github.com/ligoj</url>
+		<url>https://ligoj.io</url>
 	</organization>
 	<properties>
 		<revision>11.0.6-SNAPSHOT</revision>
