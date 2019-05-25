@@ -16,7 +16,7 @@
 		<url>https://ligoj.io</url>
 	</organization>
 	<properties>
-		<revision>11.0.6-SNAPSHOT</revision>
+		<revision>11.0.6</revision>
 		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
@@ -95,9 +95,9 @@
 		<plugin.sonar>3.6.0.1398</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
 		<ant.version>1.10.3</ant.version>
-		<junit.platform.version>1.4.1</junit.platform.version>
+		<junit.platform.version>1.4.2</junit.platform.version>
 		<junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
-		<junit.jupiter.version>5.4.1</junit.jupiter.version>
+		<junit.jupiter.version>5.4.2</junit.jupiter.version>
 		<asm.version>7.1</asm.version>
 		<gpg.skip>true</gpg.skip>
 		<jdk.version>11</jdk.version>
