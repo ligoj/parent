@@ -11,7 +11,7 @@ This is a POM with tuned Maven configurations:
 - All versions are fixed in properties for all plugins: the builds are always reproducible
 - Preconfigured unit/integration tests and code coverage with [Jacoco](http://www.eclemma.org/jacoco/)
 - Consistent encoding setting
-- Preconfigured JAR/EAR/WAR for [build number](https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin) and version in `MANIFEST.MF`
+- Preconfigured JAR/WAR for [build number](https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin) and version in `MANIFEST.MF`
 
 To benefit these features, add this parent to your `pom.xml`
 ```xml
@@ -30,7 +30,6 @@ Plugin | Version property | Skip property | Profile
 [org.apache.maven.plugins:maven-clean-plugin](https://maven.apache.org/plugins/maven-clean-plugin) | plugin.clean | |
 [org.apache.maven.plugins:maven-compiler-plugin](https://maven.apache.org/plugins/maven-compiler-plugin) | plugin.compiler | |
 [org.apache.maven.plugins:maven-dependency-plugin](https://maven.apache.org/plugins/maven-dependency-plugin) | plugin.dependency | |
-[org.apache.maven.plugins:maven-ear-plugin](https://maven.apache.org/plugins/maven-ear-plugin) | plugin.ear | |
 [org.apache.maven.plugins:maven-failsafe-plugin](http://maven.apache.org/surefire/maven-failsafe-plugin) | plug.failsafe | maven.it.skip skipITs [true] | it
 [org.apache.maven.plugins:maven-gpg-plugin](https://maven.apache.org/plugins/maven-gpg-plugin) | plugin.gpg | gpg.skip [true] |
 [org.apache.maven.plugins:maven-project-info-reports-plugin](https://maven.apache.org/plugins/maven-project-info-reports-plugin) | plugin.install | |
