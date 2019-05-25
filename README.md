@@ -61,7 +61,7 @@ Plugin | Version property | Skip property | Profile
 Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\project-x.x.x.jar` with the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 
 #### Switch to a specific plugin version
-`mvn -Dplugin.clean=3.0.0 -Dplugin.compiler=3.6.1`
+`mvn -Dplugin.clean=3.0.0 -Dplugin.compiler=3.8.0`
 
 #### Run ITs but not UTs
 `mvn -Dmaven.ut.skip=true`
@@ -78,7 +78,7 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 `mvn -Dmaven.ut.forkCount=2 -Dmaven.ut.reuseForks=true -Dmaven.ut.argLine.memory="-Xmx512m" -Dmaven.it.reuseForks=false -Dmaven.it.argLine.memory="-Xms400m -Xmx1600m" -Dmaven.it.testTimeout=600`
 
 #### Prerequisites
-`mvn -Dmaven.version=3.3.3 -Djdk.version=1.8`
+`mvn -Dmaven.version=3.3.3 -Djdk.version=11`
 
 ### Available sub parents
 #### Maven Plugin project
@@ -86,7 +86,7 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
 		<artifactId>maven-plugin</artifactId>
-		<version>4.5.2</version>
+		<version>11.0.6</version>
 		<relativePath />
 	</parent>
 ```
@@ -95,6 +95,6 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
 		<artifactId>sonar-plugin</artifactId>
-		<version>4.5.2</version>
+		<version>11.0.6</version>
 		<relativePath />
 	</parent>
