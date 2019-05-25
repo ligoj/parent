@@ -13,6 +13,10 @@
 		<url>https://travis-ci.org/ligoj/parent/</url>
 		<notifiers />
 	</ciManagement>
+	<organization>
+		<name>Ligoj</name>
+		<url>https://ligoj.io</url>
+	</organization>
 
 	<artifactId>root</artifactId>
 	<packaging>pom</packaging>
