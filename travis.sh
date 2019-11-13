@@ -18,5 +18,6 @@ function installMaven {
   export M2_HOME=~/maven/apache-maven-3.6.2
   export PATH=$M2_HOME/bin:$PATH
 }
+
 installMaven
 mvn clean install -B -e -V
