@@ -73,7 +73,7 @@
 		<plugin.jar>3.2.0</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
 		<plugin.javadoc>3.1.1</plugin.javadoc>                  <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-summary.html -->
 		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
-		<plugin.resources>3.2.0</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
+		<plugin.resources>3.1.0</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
 		<plugin.scm>1.11.2</plugin.scm>                         <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
 		<plugin.site>3.7.1</plugin.site>                        <!-- https://maven.apache.org/plugins/maven-site-plugin/site-mojo.html -->
 		<plugin.source>3.2.0</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
