@@ -80,7 +80,7 @@
 		<plugin.surefire>3.0.0-M4</plugin.surefire>             <!-- http://maven.apache.org/surefire/project-summary.html -->
 		<plugin.surefire.report>3.0.0-M4</plugin.surefire.report><!--http://maven.apache.org/surefire/project-summary.html -->
 		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
-		<plugin.war>3.2.2</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
+		<plugin.war>3.2.3</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
 
 		<!-- Non apache.org plugins -->
 		<plugin.build-helper>3.0.0</plugin.build-helper>             <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
