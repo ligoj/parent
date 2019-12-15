@@ -77,8 +77,8 @@
 		<plugin.scm>1.11.2</plugin.scm>                         <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
 		<plugin.site>3.7.1</plugin.site>                        <!-- https://maven.apache.org/plugins/maven-site-plugin/site-mojo.html -->
 		<plugin.source>3.2.0</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
-		<plugin.surefire>3.0.0-M3</plugin.surefire>             <!-- http://maven.apache.org/surefire/project-summary.html -->
-		<plugin.surefire.report>3.0.0-M3</plugin.surefire.report><!--http://maven.apache.org/surefire/project-summary.html -->
+		<plugin.surefire>3.0.0-M4</plugin.surefire>             <!-- http://maven.apache.org/surefire/project-summary.html -->
+		<plugin.surefire.report>3.0.0-M4</plugin.surefire.report><!--http://maven.apache.org/surefire/project-summary.html -->
 		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
 		<plugin.war>3.2.2</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
 
