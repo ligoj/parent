@@ -1,18 +1,25 @@
 before_cache: 
   - "rm -rf $HOME/.m2/repository/org/ligoj"
   - "find $HOME/.m2 -name resolver-status.properties -exec rm {} \\;"
-before_install: 
+before_install:
   - "chmod +x ./travis.sh"
-  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+install: java --version 
 cache: 
   directories: 
     - $HOME/.m2/repository
+    - $HOME/.sonar/cache
+    - $HOME/.cache
     - $HOME/maven
+jdk: openjdk13
+dist: xenial
 env: 
-  - TARGET=BUILD JDK='OpenJDK 11'
-install: . ./install-jdk.sh -F 11 -L GPL
+  - TARGET=BUILD
+branches:
+  only:
+    - master
+    - dev
 language: java
 notifications: 
   email: false
-script: "./travis.sh"
 sudo: false
+script: "./travis.sh"
