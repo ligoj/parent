@@ -99,8 +99,8 @@
 		<junit.jupiter.version>5.5.2</junit.jupiter.version>
 		<asm.version>7.2</asm.version>
 		<gpg.skip>true</gpg.skip>
-		<jdk.version>11</jdk.version>
-		<jdk.release>11</jdk.release>
+		<jdk.version>13</jdk.version>
+		<jdk.release>13</jdk.release>
 		<testTimeout>1000</testTimeout>
 		<plugin.jacoco.ut.destFile>${project.build.directory}/jacoco.exec</plugin.jacoco.ut.destFile>
 		<plugin.jacoco.it.destFile>${project.build.directory}/jacoco-it.exec</plugin.jacoco.it.destFile>
