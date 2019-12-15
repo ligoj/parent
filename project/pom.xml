@@ -16,7 +16,7 @@
 		<url>https://ligoj.io</url>
 	</organization>
 	<properties>
-		<revision>11.0.7-SNAPSHOT</revision>
+		<revision>13.0.0</revision>
 		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
@@ -67,7 +67,6 @@
 		<plugin.deploy>3.0.0-M1</plugin.deploy>                 <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
 		<plugin.enforcer>3.0.0-M2</plugin.enforcer>             <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
 		<plugin.failsafe>3.0.0-M3</plugin.failsafe>             <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
-		<plugin.gitflow>1.11.0</plugin.gitflow>                 <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
 		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
 		<plugin.install>3.0.0-M1</plugin.install>               <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
 		<plugin.info>3.0.0</plugin.info>                        <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
@@ -416,36 +415,6 @@
 						<name>dependency-check</name>
 						<outputDirectory>${WORKSPACE}</outputDirectory>
 						<cveValidForHours>48</cveValidForHours>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>com.amashchenko.maven.plugin</groupId>
-					<artifactId>gitflow-maven-plugin</artifactId>
-					<version>${plugin.gitflow}</version>
-					<configuration>
-						<goals>clean package deploy:deploy</goals>
-						<arguments>-Dmaven.it.skip=true -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Pminify</arguments>
-						<verbose>true</verbose>
-						<skipTestProject>true</skipTestProject>
-						<gitFlowConfig>
-							<productionBranch>master</productionBranch>
-							<developmentBranch>dev</developmentBranch>
-							<featureBranchPrefix>feature/</featureBranchPrefix>
-							<releaseBranchPrefix>release/</releaseBranchPrefix>
-							<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
-							<supportBranchPrefix>support/</supportBranchPrefix>
-							<versionTagPrefix />
-						</gitFlowConfig>
-						<commitMessages>
-							<featureStartMessage>[gitflow] Start feature {}</featureStartMessage>
-							<featureFinishMessage>[gitflow] Finish feature {}</featureFinishMessage>
-							<hotfixStartMessage>[gitflow] Start hotfix {}</hotfixStartMessage>
-							<hotfixFinishMessage>[gitflow] Finish hotfix {}</hotfixFinishMessage>
-							<releaseStartMessage>[gitflow] Start release {}</releaseStartMessage>
-							<releaseFinishMessage>[gitflow] Finish release {}</releaseFinishMessage>
-							<tagHotfixMessage>[gitflow] Tag hotfix {}</tagHotfixMessage>
-							<tagReleaseMessage>[gitflow] Tag release {}</tagReleaseMessage>
-						</commitMessages>
 					</configuration>
 				</plugin>
 				<plugin>
