@@ -358,7 +358,7 @@
 							<configuration>
 								<rules>
 									<requireMavenVersion>
-										<version>${maven.version}</version>
+										<version>&gt;=${maven.version}</version>
 									</requireMavenVersion>
 								</rules>
 							</configuration>
@@ -371,7 +371,7 @@
 							<configuration>
 								<rules>
 									<requireJavaVersion>
-										<version>${jdk.version}</version>
+										<version>&gt;=${jdk.version}</version>
 									</requireJavaVersion>
 								</rules>
 							</configuration>
