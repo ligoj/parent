@@ -31,5 +31,3 @@ cache:
   - C:\Users\appveyor\.m2
 artifacts:
   - path: 'target\*.pom'
-on_failure:
-  - ps: Get-ChildItem *.log | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
