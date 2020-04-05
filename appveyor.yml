@@ -30,7 +30,6 @@ cache:
   - C:\maven\
   - C:\Users\appveyor\.m2
 artifacts:
-  - path: 'target\*.jar'
+  - path: 'target\*.pom'
 on_failure:
-  - ps: Get-ChildItem target\*.pom | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
   - ps: Get-ChildItem *.log | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
