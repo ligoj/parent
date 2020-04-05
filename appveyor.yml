@@ -32,5 +32,5 @@ cache:
 artifacts:
   - path: 'target\*.jar'
 on_failure:
-  - ps: Get-ChildItem target\surefire-reports\*.txt | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
+  - ps: Get-ChildItem target\*.pom | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
   - ps: Get-ChildItem *.log | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
