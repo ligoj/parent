@@ -66,7 +66,7 @@
 		<plugin.dependency>3.1.2</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/summary.html -->
 		<plugin.deploy>3.0.0-M1</plugin.deploy>                 <!-- http://maven.apache.org/plugins/maven-deploy-plugin/summary.html -->
 		<plugin.enforcer>3.0.0-M3</plugin.enforcer>             <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
-		<plugin.failsafe>3.0.0-M3</plugin.failsafe>             <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/summary.html -->
+		<plugin.failsafe>3.0.0-M5</plugin.failsafe>             <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/summary.html -->
 		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/summary.html -->
 		<plugin.install>3.0.0-M1</plugin.install>               <!-- http://maven.apache.org/plugins/maven-install-plugin/summary.html -->
 		<plugin.info>3.0.0</plugin.info>                        <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
