@@ -94,9 +94,9 @@
 		<plugin.sonar>3.8.0.2131</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
 		<ant.version>1.10.9</ant.version>
-		<junit.platform.version>1.5.1</junit.platform.version>
+		<junit.platform.version>1.6.2</junit.platform.version>
+		<junit.jupiter.version>5.7.1</junit.jupiter.version>
 		<junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
-		<junit.jupiter.version>5.5.2</junit.jupiter.version>
 		<asm.version>8.0.1</asm.version>
 		<gpg.skip>true</gpg.skip>
 		<jdk.version>14</jdk.version>
