@@ -89,7 +89,7 @@
 
 		<plugin.coveralls>4.3.0</plugin.coveralls>                   <!-- https://mvnrepository.com/artifact/org.eluder.coveralls/coveralls-maven-plugin -->
 		<plugin.dependency-check>5.2.4</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
-		<plugin.jacoco>0.8.5</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+		<plugin.jacoco>0.8.6</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
 		<plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
 		<plugin.sonar>3.8.0.2131</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
