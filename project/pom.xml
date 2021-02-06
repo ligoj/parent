@@ -22,7 +22,7 @@
 		<domain.name>github.com</domain.name>
 		<scm.server>https://${domain.name}</scm.server>
 		<scm.server.anonymous>${scm.server}</scm.server.anonymous>
-		<copyright.year>2020</copyright.year>
+		<copyright.year>2021</copyright.year>
 		<ci.server>https://${domain.name}/jenkins/</ci.server>
 		<JENKINS_URL>${ci.server}</JENKINS_URL>
 		<WORKSPACE>${project.build.directory}</WORKSPACE>
@@ -91,7 +91,7 @@
 		<plugin.dependency-check>5.2.4</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
 		<plugin.jacoco>0.8.5</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
 		<plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
-		<plugin.sonar>3.7.0.1746</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+		<plugin.sonar>3.8.0.2131</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
 		<ant.version>1.10.3</ant.version>
 		<junit.platform.version>1.5.1</junit.platform.version>
