@@ -18,7 +18,7 @@ To benefit these features, add this parent to your `pom.xml`
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
 		<artifactId>project</artifactId>
-		<version>11.0.6</version>
+		<version>14.0.1</version>
 		<relativePath />
 	</parent>
 ```
