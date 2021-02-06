@@ -59,28 +59,28 @@
 		<maven.build.date>${maven.build.timestamp}</maven.build.date>
 
 		<!-- https://maven.apache.org/plugins/index.html -->
-		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/project-summary.html -->
-		<plugin.assembly>3.2.0</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/project-summary.html -->
-		<plugin.clean>3.1.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/project-summary.html -->
-		<plugin.compiler>3.8.1</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/project-summary.html -->
-		<plugin.dependency>3.1.1</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/project-summary.html -->
-		<plugin.deploy>3.0.0-M1</plugin.deploy>                 <!-- http://maven.apache.org/plugins/maven-deploy-plugin/project-summary.html -->
-		<plugin.enforcer>3.0.0-M3</plugin.enforcer>             <!-- http://maven.apache.org/enforcer/enforcer-rules/project-summary.html -->
-		<plugin.failsafe>3.0.0-M3</plugin.failsafe>             <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/project-summary.html -->
-		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/project-summary.html -->
-		<plugin.install>3.0.0-M1</plugin.install>               <!-- http://maven.apache.org/plugins/maven-install-plugin/project-summary.html -->
-		<plugin.info>3.0.0</plugin.info>                        <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/project-summary.html -->
-		<plugin.jar>3.2.0</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/project-summary.html -->
-		<plugin.javadoc>3.1.1</plugin.javadoc>                  <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/project-summary.html -->
-		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/project-summary.html -->
-		<plugin.resources>3.1.0</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/project-summary.html -->
+		<plugin.antrun>1.8</plugin.antrun>                      <!-- http://maven.apache.org/plugins/maven-antrun-plugin/summary.html -->
+		<plugin.assembly>3.3.0</plugin.assembly>                <!-- http://maven.apache.org/plugins/maven-assembly-plugin/summary.html -->
+		<plugin.clean>3.1.0</plugin.clean>                      <!-- http://maven.apache.org/plugins/maven-clean-plugin/summary.html -->
+		<plugin.compiler>3.8.1</plugin.compiler>                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/summary.html -->
+		<plugin.dependency>3.1.1</plugin.dependency>            <!-- http://maven.apache.org/plugins/maven-dependency-plugin/summary.html -->
+		<plugin.deploy>3.0.0-M1</plugin.deploy>                 <!-- http://maven.apache.org/plugins/maven-deploy-plugin/summary.html -->
+		<plugin.enforcer>3.0.0-M3</plugin.enforcer>             <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
+		<plugin.failsafe>3.0.0-M3</plugin.failsafe>             <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/summary.html -->
+		<plugin.gpg>1.6</plugin.gpg>                            <!-- http://maven.apache.org/plugins/maven-gpg-plugin/summary.html -->
+		<plugin.install>3.0.0-M1</plugin.install>               <!-- http://maven.apache.org/plugins/maven-install-plugin/summary.html -->
+		<plugin.info>3.0.0</plugin.info>                        <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
+		<plugin.jar>3.2.0</plugin.jar>                          <!-- http://maven.apache.org/plugins/maven-jar-plugin/summary.html -->
+		<plugin.javadoc>3.1.1</plugin.javadoc>                  <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/summary.html -->
+		<plugin.release>2.5.3</plugin.release>                  <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
+		<plugin.resources>3.1.0</plugin.resources>              <!-- http://maven.apache.org/plugins/maven-resources-plugin/summary.html -->
 		<plugin.scm>1.11.2</plugin.scm>                         <!-- http://maven.apache.org/scm/maven-scm-plugin/usage.html -->
 		<plugin.site>3.7.1</plugin.site>                        <!-- https://maven.apache.org/plugins/maven-site-plugin/site-mojo.html -->
-		<plugin.source>3.2.0</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/project-summary.html -->
-		<plugin.surefire>3.0.0-M5</plugin.surefire>             <!-- http://maven.apache.org/surefire/project-summary.html -->
+		<plugin.source>3.2.0</plugin.source>                    <!-- http://maven.apache.org/plugins/maven-source-plugin/summary.html -->
+		<plugin.surefire>3.0.0-M5</plugin.surefire>             <!-- http://maven.apache.org/surefire/summary.html -->
 		<plugin.surefire.report>3.0.0-M5</plugin.surefire.report><!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
-		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/project-summary.html -->
-		<plugin.war>3.2.3</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/project-summary.html -->
+		<plugin.verifier>1.1</plugin.verifier>                  <!-- http://maven.apache.org/plugins/maven-verifier-plugin/summary.html -->
+		<plugin.war>3.2.3</plugin.war>                          <!-- http://maven.apache.org/plugins/maven-war-plugin/summary.html -->
 
 		<!-- Non apache.org plugins -->
 		<plugin.build-helper>3.0.0</plugin.build-helper>             <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
