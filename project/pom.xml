@@ -33,7 +33,7 @@
 		<encoding.javadoc>${encoding.java}</encoding.javadoc>
 		<encoding.java>${project.build.sourceEncoding}</encoding.java>
 		<test.target.server.hostname>localhost</test.target.server.hostname>
-		<maven.version>3.6.3</maven.version>
+		<maven.version>3.8.1</maven.version>
 		<maven.ut.argLine.memory>-Xms800m -Xmx800m</maven.ut.argLine.memory>
 		<maven.ut.argLine>${maven.ut.argLine.memory}</maven.ut.argLine>
 		<maven.ut.reuseForks>true</maven.ut.reuseForks>
