@@ -16,7 +16,7 @@
 		<url>https://ligoj.io</url>
 	</organization>
 	<properties>
-		<revision>15.0.0</revision>
+		<revision>15.0.1</revision>
 		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
@@ -1001,6 +1001,16 @@
 					</plugin>
 				</plugins>
 			</build>
+		</profile>
+		<profile>
+			<id>github</id>
+			<distributionManagement>
+				<repository>
+					<id>github-ligoj</id>
+					<name>GitHub Packages</name>
+					<url>https://maven.pkg.github.com/ligoj/parent</url>
+				</repository>
+			</distributionManagement>
 		</profile>
 
 	</profiles>
