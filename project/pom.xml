@@ -16,7 +16,7 @@
 		<url>https://ligoj.io</url>
 	</organization>
 	<properties>
-		<revision>14.0.2-SNAPSHOT</revision>
+		<revision>15.0.0-SNAPSHOT</revision>
 		<gitRepositoryName>parent</gitRepositoryName>
 		<workspace>${user.dir}</workspace>
 		<domain.name>github.com</domain.name>
@@ -85,22 +85,22 @@
 		<!-- Non apache.org plugins -->
 		<plugin.build-helper>3.0.0</plugin.build-helper>             <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
 		<plugin.buildnumber>1.4</plugin.buildnumber>                 <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
-		<plugin.versions>2.7</plugin.versions>                       <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
+		<plugin.versions>2.8.1</plugin.versions>                       <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
 		<plugin.coveralls>4.3.0</plugin.coveralls>                   <!-- https://mvnrepository.com/artifact/org.eluder.coveralls/coveralls-maven-plugin -->
-		<plugin.dependency-check>6.1.0</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+		<plugin.dependency-check>6.1.6</plugin.dependency-check>     <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
 		<plugin.jacoco>0.8.6</plugin.jacoco>                         <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
 		<plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners><!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
-		<plugin.sonar>3.8.0.2131</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+		<plugin.sonar>3.9.0.2155</plugin.sonar>                       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
-		<ant.version>1.10.9</ant.version>
+		<ant.version>1.10.10</ant.version>
 		<junit.platform.version>1.6.2</junit.platform.version>
 		<junit.jupiter.version>5.7.1</junit.jupiter.version>
 		<junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
-		<asm.version>8.0.1</asm.version>
+		<asm.version>9.1</asm.version>
 		<gpg.skip>true</gpg.skip>
-		<jdk.version>14</jdk.version>
-		<jdk.release>14</jdk.release>
+		<jdk.version>15</jdk.version>
+		<jdk.release>15</jdk.release>
 		<testTimeout>1000</testTimeout>
 		<plugin.jacoco.ut.destFile>${project.build.directory}/jacoco.exec</plugin.jacoco.ut.destFile>
 		<plugin.jacoco.it.destFile>${project.build.directory}/jacoco-it.exec</plugin.jacoco.it.destFile>
@@ -125,8 +125,8 @@
 		<developer>
 			<email>fabrice.daugan@gmail.com</email>
 			<name>Fabrice Daugan</name>
-			<url>https://github.com/fabdouglas</url>
-			<id>fabdouglas</id>
+			<url>https://github.com/fdaugan</url>
+			<id>fdaugan</id>
 		</developer>
 	</developers>
 	<licenses>
