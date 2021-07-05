@@ -15,7 +15,7 @@
 	</scm>
 	<ciManagement>
 		<system>Travis</system>
-		<url>https://travis-ci.org/ligoj/parent/</url>
+		<url>https://travis-ci.com/ligoj/parent/</url>
 		<notifiers />
 	</ciManagement>
 	<organization>
