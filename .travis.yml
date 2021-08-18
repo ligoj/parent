@@ -10,7 +10,7 @@ cache:
     - $HOME/.sonar/cache
     - $HOME/.cache
     - $HOME/maven
-jdk: openjdk15
+jdk: openjdk16
 dist: xenial
 env: 
   - TARGET=BUILD
@@ -21,5 +21,5 @@ branches:
 language: java
 notifications: 
   email: false
-sudo: false
+os: linux
 script: "./travis.sh"

@@ -17,7 +17,7 @@ To benefit these features, add this parent to your `pom.xml`
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
 		<artifactId>project</artifactId>
-		<version>15.0.1</version>
+		<version>16.0.0</version>
 		<relativePath />
 	</parent>
 ```
@@ -76,7 +76,7 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 `mvn -Dmaven.ut.forkCount=2 -Dmaven.ut.reuseForks=true -Dmaven.ut.argLine.memory="-Xmx512m" -Dmaven.it.reuseForks=false -Dmaven.it.argLine.memory="-Xms400m -Xmx1600m" -Dmaven.it.testTimeout=600`
 
 #### Prerequisites
-`mvn -Dmaven.version=3.3.3 -Djdk.version=11`
+`mvn -Dmaven.version=3.3.3 -Djdk.version=16`
 
 ### Available sub parents
 #### Maven Plugin project
@@ -84,7 +84,7 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
 		<artifactId>maven-plugin</artifactId>
-		<version>11.0.6</version>
+		<version>16.0.0</version>
 		<relativePath />
 	</parent>
 ```
@@ -93,6 +93,6 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
 		<artifactId>sonar-plugin</artifactId>
-		<version>11.0.6</version>
+		<version>16.0.0</version>
 		<relativePath />
 	</parent>
