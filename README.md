@@ -1,7 +1,7 @@
 # :link: Universal parent [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root)
 Parent POM to get rid of all [Maven](https://maven.apache.org/index.html) issues and to reproduce the builds on any seat.
 
-[![Build Status](https://travis-ci.com/ligoj/parent.svg?branch=master)](https://travis-ci.com/ligoj/parent)
+[![Build Status](https://app.travis-ci.com/github/ligoj/parent.svg?branch=master)](https://app.travis-ci.com/github/ligoj/parent)
 [![Build Status](https://circleci.com/gh/ligoj/parent.svg?style=svg)](https://circleci.com/gh/ligoj/parent)
 [![Build Status](https://ci.appveyor.com/api/projects/status/m1lf4f6q488cdooo/branch/master?svg=true)](https://ci.appveyor.com/project/ligoj/parent/branch/master)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://gus.mit-license.org/)
