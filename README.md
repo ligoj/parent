@@ -76,7 +76,7 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 `mvn -Dmaven.ut.forkCount=2 -Dmaven.ut.reuseForks=true -Dmaven.ut.argLine.memory="-Xmx512m" -Dmaven.it.reuseForks=false -Dmaven.it.argLine.memory="-Xms400m -Xmx1600m" -Dmaven.it.testTimeout=600`
 
 #### Prerequisites
-`mvn -Dmaven.version=3.3.3 -Djdk.version=16`
+`mvn -Dmaven.version=3.8.5 -Djdk.version=17`
 
 ### Available sub parents
 #### Maven Plugin project
@@ -84,7 +84,7 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
 		<artifactId>maven-plugin</artifactId>
-		<version>16.0.0</version>
+		<version>17.0.0</version>
 		<relativePath />
 	</parent>
 ```
@@ -93,6 +93,6 @@ Runs UTs with enabled coverage, produces `target\jacoco.exec`, produces `target\
 	<parent>
 		<groupId>org.ligoj.parent</groupId>
 		<artifactId>sonar-plugin</artifactId>
-		<version>16.0.0</version>
+		<version>17.0.0</version>
 		<relativePath />
 	</parent>
