@@ -211,6 +211,8 @@
 							<manifestEntries>
 								<svnrevision>${buildNumber}</svnrevision>
 								<buildDate>${timestamp}</buildDate>
+								<url>${project.url}</url>
+								<key>value</key>
 							</manifestEntries>
 						</archive>
 					</configuration>
@@ -227,7 +229,7 @@
 								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 							</manifest>
 							<manifestEntries>
-								<svnrevision>${buildNumber}</svnrevision>
+								<githash>${buildNumber}</githash>
 								<buildDate>${timestamp}</buildDate>
 							</manifestEntries>
 						</archive>
