@@ -17,7 +17,6 @@ This is a POM with tuned Maven configurations:
 To benefit these features, add this parent to your `pom.xml`
 
 ```xml
-
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>project</artifactId>
@@ -90,7 +89,7 @@ the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 
 #### Prerequisites
 
-`mvn -Dmaven.version=3.8.5 -Djdk.version=17`
+`mvn -Dmaven.version=3.9.4 -Djdk.version=17`
 
 #### Check updates
 
@@ -101,7 +100,6 @@ the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 #### Maven Plugin project
 
 ```xml
-
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>maven-plugin</artifactId>
@@ -113,9 +111,10 @@ the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 #### SonarQube Plugin project
 
 ```xml
-	<parent>
-		<groupId>org.ligoj.parent</groupId>
-		<artifactId>sonar-plugin</artifactId>
-		<version>17.0.0</version>
-		<relativePath />
-	</parent>
+<parent>
+    <groupId>org.ligoj.parent</groupId>
+    <artifactId>sonar-plugin</artifactId>
+    <version>17.0.0</version>
+    <relativePath />
+</parent>
+```
