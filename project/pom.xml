@@ -86,7 +86,7 @@
 		<!-- Non apache.org plugins -->
 		<plugin.build-helper>3.3.0</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
 		<plugin.buildnumber>3.0.0</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
-		<plugin.versions>2.10.0</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
+		<plugin.versions>2.16.0</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
 		<plugin.dependency-check>8.3.1</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
 		<plugin.jacoco>0.8.10</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
