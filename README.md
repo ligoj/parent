@@ -20,7 +20,7 @@ To benefit these features, add this parent to your `pom.xml`
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>project</artifactId>
-    <version>17.0.0</version>
+    <version>21.0.0</version>
     <relativePath/>
 </parent>
 ```
@@ -93,7 +93,9 @@ the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 
 #### Check updates
 
-`mvn versions:display-plugin-updates -Pjacoco,it,sources`
+```bash
+mvn versions:display-plugin-updates -Pjacoco,it,sources
+```
 
 ### Available sub parents
 
