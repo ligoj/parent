@@ -13,9 +13,6 @@
 	<packaging>pom</packaging>
 	<name>Parent - Maven Plugin Project</name>
 	<description>Maven plugin Project parent configuration.</description>
-	<prerequisites>
-		<maven>${maven.version}</maven>
-	</prerequisites>
 
 	<properties>
 		<maven-plugin-api>${maven.version}</maven-plugin-api>
