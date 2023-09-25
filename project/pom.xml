@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ligoj.parent</groupId>
 	<artifactId>project</artifactId>
-	<version>21.0.0</version>
+	<version>21.0.1-SNAPHOST</version>
 	<packaging>pom</packaging>
 	<name>Parent - Project</name>
 	<description>Parent defining top level global configuration of forge.</description>
@@ -22,7 +22,7 @@
 		<domain.name>github.com</domain.name>
 		<scm.server>https://${domain.name}</scm.server>
 		<scm.server.anonymous>${scm.server}</scm.server.anonymous>
-		<copyright.year>2022</copyright.year>
+		<copyright.year>2023</copyright.year>
 		<ci.server>https://${domain.name}/jenkins/</ci.server>
 		<JENKINS_URL>${ci.server}</JENKINS_URL>
 		<WORKSPACE>${project.build.directory}</WORKSPACE>
@@ -161,9 +161,9 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>${plugin.surefire.report}</version>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junit.jupiter.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
@@ -312,6 +312,21 @@
 						<dependency>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>${plugin.surefire.report}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.surefire</groupId>
+							<artifactId>surefire-api</artifactId>
+							<version>${plugin.surefire.report}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.surefire</groupId>
+							<artifactId>surefire-booter</artifactId>
+							<version>${plugin.surefire.report}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.surefire</groupId>
+							<artifactId>surefire-logger-api</artifactId>
 							<version>${plugin.surefire.report}</version>
 						</dependency>
 						<dependency>
@@ -819,6 +834,21 @@
 								<dependency>
 									<groupId>org.apache.maven.plugins</groupId>
 									<artifactId>maven-surefire-report-plugin</artifactId>
+									<version>${plugin.surefire.report}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.apache.maven.surefire</groupId>
+									<artifactId>surefire-api</artifactId>
+									<version>${plugin.surefire.report}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.apache.maven.surefire</groupId>
+									<artifactId>surefire-booter</artifactId>
+									<version>${plugin.surefire.report}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.apache.maven.surefire</groupId>
+									<artifactId>surefire-logger-api</artifactId>
 									<version>${plugin.surefire.report}</version>
 								</dependency>
 								<dependency>
