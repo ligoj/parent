@@ -94,7 +94,7 @@ the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 #### Check updates
 
 ```bash
-mvn versions:display-plugin-updates -Pjacoco,it,sources
+mvn versions:display-plugin-updates -Pjacoco,it,sources,javadoc
 ```
 
 ### Available sub parents
