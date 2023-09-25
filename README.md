@@ -89,7 +89,7 @@ the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 
 #### Prerequisites
 
-`mvn -Dmaven.version=3.9.4 -Djdk.version=17`
+`mvn -Dmaven.version=3.9.4 -Djdk.version=21`
 
 #### Check updates
 
@@ -105,7 +105,7 @@ mvn versions:display-plugin-updates -Pjacoco,it,sources
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>maven-plugin</artifactId>
-    <version>17.0.0</version>
+    <version>21.0.0</version>
     <relativePath/>
 </parent>
 ```
@@ -116,7 +116,7 @@ mvn versions:display-plugin-updates -Pjacoco,it,sources
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>sonar-plugin</artifactId>
-    <version>17.0.0</version>
+    <version>21.0.0</version>
     <relativePath />
 </parent>
 ```
