@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ligoj.parent</groupId>
 	<artifactId>project</artifactId>
-	<version>21.0.1-SNAPHOST</version>
+	<version>21.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Parent - Project</name>
 	<description>Parent defining top level global configuration of forge.</description>
@@ -160,11 +160,6 @@
 	</distributionManagement>
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>org.junit.jupiter</groupId>
-				<artifactId>junit-jupiter-engine</artifactId>
-				<version>${junit.jupiter.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter-engine</artifactId>
