@@ -60,68 +60,44 @@
 
         <!-- https://maven.apache.org/plugins/index.html -->
         <plugin.antrun>3.1.0</plugin.antrun> <!-- http://maven.apache.org/plugins/maven-antrun-plugin/summary.html -->
-        <plugin.assembly>3.6.0
-        </plugin.assembly> <!-- http://maven.apache.org/plugins/maven-assembly-plugin/summary.html -->
+        <plugin.assembly>3.6.0</plugin.assembly> <!-- http://maven.apache.org/plugins/maven-assembly-plugin/summary.html -->
         <plugin.clean>3.3.1</plugin.clean> <!-- https://maven.apache.org/plugins/maven-clean-plugin/summary.html -->
-        <plugin.compiler>3.11.0
-        </plugin.compiler> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-        <plugin.dependency>3.6.0
-        </plugin.dependency> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
-        <plugin.deploy>3.1.1
-        </plugin.deploy> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
+        <plugin.compiler>3.11.0</plugin.compiler> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <plugin.dependency>3.6.0</plugin.dependency> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
+        <plugin.deploy>3.1.1</plugin.deploy> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
         <plugin.enforcer>3.4.1</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
-        <plugin.failsafe>3.1.2
-        </plugin.failsafe> <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/summary.html -->
+        <plugin.failsafe>3.1.2</plugin.failsafe> <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/summary.html -->
         <plugin.gpg>1.6</plugin.gpg> <!-- http://maven.apache.org/plugins/maven-gpg-plugin/summary.html -->
-        <plugin.install>3.1.1
-        </plugin.install> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
-        <plugin.info>3.4.5
-        </plugin.info> <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
+        <plugin.install>3.1.1</plugin.install> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
+        <plugin.info>3.4.5</plugin.info> <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
         <plugin.jar>3.3.0</plugin.jar> <!-- http://maven.apache.org/plugins/maven-jar-plugin/summary.html -->
-        <plugin.javadoc>3.6.0
-        </plugin.javadoc> <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/summary.html -->
-        <plugin.release>3.0.1
-        </plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
-        <plugin.resources>3.3.1
-        </plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
-        <plugin.scm>2.0.1
-        </plugin.scm> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-scm-plugin -->
-        <plugin.shade>3.5.0
-        </plugin.shade> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
-        <plugin.site>3.12.1
-        </plugin.site> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
-        <plugin.source>3.3.0
-        </plugin.source> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
-        <plugin.verifier>1.1
-        </plugin.verifier> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-verifier-plugin -->
+        <plugin.javadoc>3.6.0</plugin.javadoc> <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/summary.html -->
+        <plugin.release>3.0.1</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
+        <plugin.resources>3.3.1</plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
+        <plugin.scm>2.0.1</plugin.scm> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-scm-plugin -->
+        <plugin.shade>3.5.1</plugin.shade> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
+        <plugin.site>3.12.1</plugin.site> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+        <plugin.source>3.3.0</plugin.source> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
+        <plugin.verifier>1.1</plugin.verifier> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-verifier-plugin -->
         <plugin.wagon-webdav-jackrabbit>3.5.3</plugin.wagon-webdav-jackrabbit>
-        <plugin.war>3.4.0
-        </plugin.war> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
+        <plugin.war>3.4.0</plugin.war> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
 
         <!-- Test -->
         <plugin.surefire>3.1.2</plugin.surefire> <!-- http://maven.apache.org/surefire/summary.html -->
-        <plugin.surefire.report>3.1.2
-        </plugin.surefire.report> <!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
+        <plugin.surefire.report>3.1.2</plugin.surefire.report> <!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
         <junit.platform.version>1.10.0</junit.platform.version>
-        <junit.jupiter.version>5.10.0
-        </junit.jupiter.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+        <junit.jupiter.version>5.10.0</junit.jupiter.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
 
         <!-- Non apache.org plugins -->
-        <plugin.build-helper>3.4.0
-        </plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
-        <plugin.buildnumber>3.2.0
-        </plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
-        <plugin.versions>2.16.1
-        </plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
+        <plugin.build-helper>3.4.0</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
+        <plugin.buildnumber>3.2.0</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
+        <plugin.versions>2.16.1</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
-        <plugin.dependency-check>8.4.0
-        </plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+        <plugin.dependency-check>8.4.0</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
         <plugin.jacoco>0.8.10</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-        <plugin.jacoco.listeners>5.14.0.18788
-        </plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
-        <plugin.sonar>3.10.0.2594
-        </plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+        <plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
+        <plugin.sonar>3.10.0.2594</plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
         <ant.version>1.10.13</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
         <asm.version>9.5</asm.version> <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm-->
