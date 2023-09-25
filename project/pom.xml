@@ -117,9 +117,6 @@
 		<sonar.jacoco.reportPath>${plugin.jacoco.ut.destFile}</sonar.jacoco.reportPath>
 		<sonar.jacoco.reportPaths>${plugin.jacoco.ut.destFile}, ${plugin.jacoco.it.destFile}</sonar.jacoco.reportPaths>
 	</properties>
-	<prerequisites>
-		<maven>${maven.version}</maven>
-	</prerequisites>
 	<scm>
 		<url>https://github.com/ligoj/parent</url>
 		<connection>scm:git:https://github.com/ligoj/parent.git</connection>
