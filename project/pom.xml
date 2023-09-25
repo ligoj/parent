@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ligoj.parent</groupId>
 	<artifactId>project</artifactId>
-	<version>17.0.1-SNAPSHOT</version>
+	<version>21.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Parent - Project</name>
 	<description>Parent defining top level global configuration of forge.</description>
@@ -64,43 +64,47 @@
 		<plugin.compiler>3.11.0</plugin.compiler> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 		<plugin.dependency>3.6.0</plugin.dependency> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
 		<plugin.deploy>3.1.1</plugin.deploy> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
-		<plugin.enforcer>3.3.0</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
+		<plugin.enforcer>3.4.1</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
 		<plugin.failsafe>3.1.2</plugin.failsafe> <!-- http://maven.apache.org/surefire/maven-failsafe-plugin/summary.html -->
 		<plugin.gpg>1.6</plugin.gpg> <!-- http://maven.apache.org/plugins/maven-gpg-plugin/summary.html -->
 		<plugin.install>3.1.1</plugin.install> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
-		<plugin.info>3.2.2</plugin.info> <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
+		<plugin.info>3.4.5</plugin.info> <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
 		<plugin.jar>3.3.0</plugin.jar> <!-- http://maven.apache.org/plugins/maven-jar-plugin/summary.html -->
-		<plugin.javadoc>3.5.0</plugin.javadoc> <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/summary.html -->
+		<plugin.javadoc>3.6.0</plugin.javadoc> <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/summary.html -->
 		<plugin.release>3.0.1</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
 		<plugin.resources>3.3.1</plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
 		<plugin.scm>2.0.1</plugin.scm> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-scm-plugin -->
 		<plugin.shade>3.5.0</plugin.shade> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
 		<plugin.site>3.12.1</plugin.site> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
 		<plugin.source>3.3.0</plugin.source> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
-		<plugin.surefire>3.1.2</plugin.surefire> <!-- http://maven.apache.org/surefire/summary.html -->
-		<plugin.surefire.report>3.1.2</plugin.surefire.report> <!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
 		<plugin.verifier>1.1</plugin.verifier> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-verifier-plugin -->
 		<plugin.wagon-webdav-jackrabbit>3.5.3</plugin.wagon-webdav-jackrabbit>
-		<plugin.war>3.3.2</plugin.war> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
+		<plugin.war>3.4.0</plugin.war> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
 
-		<!-- Non apache.org plugins -->
-		<plugin.build-helper>3.3.0</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
-		<plugin.buildnumber>3.0.0</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
-		<plugin.versions>2.16.0</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
-
-		<plugin.dependency-check>8.3.1</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
-		<plugin.jacoco>0.8.10</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-		<plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
-		<plugin.sonar>3.9.1.2184</plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
-
-		<ant.version>1.10.13</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+		<!-- Test -->
+		<plugin.surefire>3.1.2</plugin.surefire> <!-- http://maven.apache.org/surefire/summary.html -->
+		<plugin.surefire.report>3.1.2</plugin.surefire.report> <!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
 		<junit.platform.version>1.10.0</junit.platform.version>
 		<junit.jupiter.version>5.10.0</junit.jupiter.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
 		<junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
+
+		<!-- Non apache.org plugins -->
+		<plugin.build-helper>3.4.0</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
+		<plugin.buildnumber>3.2.0</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
+		<plugin.versions>2.16.1</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
+
+		<plugin.dependency-check>8.4.0</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+		<plugin.jacoco>0.8.10</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+		<plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
+		<plugin.sonar>3.10.0.2594</plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+
+		<ant.version>1.10.13</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
 		<asm.version>9.5</asm.version> <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm-->
 		<gpg.skip>true</gpg.skip>
-		<jdk.version>17</jdk.version>
-		<jdk.release>17</jdk.release>
+		<jdk.version>21</jdk.version>
+		<jdk.release>21</jdk.release>
+		<jdk.enablePreview>true</jdk.enablePreview>
+		<jdk.xlint>-Xlint:all,-options,-path,-serial,-processing,-preview,-this-escape</jdk.xlint>
 		<testTimeout>1000</testTimeout>
 		<plugin.jacoco.ut.destFile>${project.build.directory}/jacoco.exec</plugin.jacoco.ut.destFile>
 		<plugin.jacoco.it.destFile>${project.build.directory}/jacoco-it.exec</plugin.jacoco.it.destFile>
@@ -159,6 +163,26 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>${plugin.surefire.report}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junit.jupiter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>${junit.jupiter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-params</artifactId>
+				<version>${junit.jupiter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-launcher</artifactId>
+				<version>${junit.platform.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -240,8 +264,9 @@
 						<target>${jdk.version}</target>
 						<release>${jdk.release}</release>
 						<encoding>${encoding.java}</encoding>
+						<enablePreview>${jdk.enablePreview}</enablePreview>
 						<compilerArgs>
-							<arg>-Xlint:all,-options,-path</arg>
+							<arg>${jdk.xlint}</arg>
 							<arg>-parameters</arg>
 							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
 							<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
@@ -269,16 +294,36 @@
 							<version>${junit.jupiter.version}</version>
 						</dependency>
 						<dependency>
+							<groupId>org.junit.jupiter</groupId>
+							<artifactId>junit-jupiter-api</artifactId>
+							<version>${junit.jupiter.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.junit.jupiter</groupId>
+							<artifactId>junit-jupiter-params</artifactId>
+							<version>${junit.jupiter.version}</version>
+						</dependency>
+						<dependency>
 							<groupId>org.ow2.asm</groupId>
 							<artifactId>asm</artifactId>
 							<version>${asm.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>${plugin.surefire.report}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.junit.platform</groupId>
+							<artifactId>junit-platform-launcher</artifactId>
+							<version>${junit.platform.version}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
 					<artifactId>nexus-staging-maven-plugin</artifactId>
-					<version>1.6.12</version>
+					<version>1.6.13</version>
 					<extensions>true</extensions>
 					<configuration>
 						<serverId>ossrh</serverId>
@@ -308,6 +353,10 @@
 						<excludes>
 							<exclude>**/Abstract*</exclude>
 						</excludes>
+						<argLine>
+							--enable-preview
+							-XX:+EnableDynamicAgentLoading
+						</argLine>
 					</configuration>
 					<dependencies>
 						<dependency>
@@ -742,11 +791,41 @@
 							</configuration>
 							<dependencies>
 								<dependency>
+									<groupId>org.junit.platform</groupId>
+									<artifactId>junit-platform-surefire-provider</artifactId>
+									<version>${junit.platform.surefire.version}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.junit.jupiter</groupId>
+									<artifactId>junit-jupiter-engine</artifactId>
+									<version>${junit.jupiter.version}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.junit.jupiter</groupId>
+									<artifactId>junit-jupiter-api</artifactId>
+									<version>${junit.jupiter.version}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.junit.jupiter</groupId>
+									<artifactId>junit-jupiter-params</artifactId>
+									<version>${junit.jupiter.version}</version>
+								</dependency>
+								<dependency>
 									<groupId>org.ow2.asm</groupId>
 									<artifactId>asm</artifactId>
-									<version>${asm.version}</version> <!-- Use newer version of ASM -->
+									<version>${asm.version}</version>
 								</dependency>
-							</dependencies>
+								<dependency>
+									<groupId>org.apache.maven.plugins</groupId>
+									<artifactId>maven-surefire-report-plugin</artifactId>
+									<version>${plugin.surefire.report}</version>
+								</dependency>
+								<dependency>
+									<groupId>org.junit.platform</groupId>
+									<artifactId>junit-platform-launcher</artifactId>
+									<version>${junit.platform.version}</version>
+								</dependency>
+						</dependencies>
 						</plugin>
 						<plugin>
 							<artifactId>maven-failsafe-plugin</artifactId>
