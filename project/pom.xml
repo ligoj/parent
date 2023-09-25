@@ -130,6 +130,7 @@
         <jdk.release>21</jdk.release>
         <jdk.enablePreview>true</jdk.enablePreview>
         <jdk.xlint>-Xlint:all,-options,-path,-serial,-processing,-preview,-this-escape</jdk.xlint>
+        <!--  javac - -help-lint -->
         <testTimeout>1000</testTimeout>
         <plugin.jacoco.ut.destFile>${project.build.directory}/jacoco.exec</plugin.jacoco.ut.destFile>
         <plugin.jacoco.it.destFile>${project.build.directory}/jacoco-it.exec</plugin.jacoco.it.destFile>
@@ -704,6 +705,39 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>${plugin.build-helper}</version>
+                    <executions>
+                        <execution>
+                            <id>add-legal-resource</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>add-resource</goal>
+                            </goals>
+                            <configuration>
+                                <resources>
+                                    <resource>
+                                        <!--suppress UnresolvedMavenProperty -->
+                                        <directory>${maven.multiModuleProjectDirectory}</directory>
+                                        <includes>
+                                            <include>LICENSE</include>
+                                        </includes>
+                                        <targetPath>META-INF</targetPath>
+                                    </resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>year-property</id>
+                            <goals>
+                                <goal>timestamp-property</goal>
+                            </goals>
+                            <phase>validate</phase>
+                            <configuration>
+                                <name>project.year</name>
+                                <locale>en,US</locale>
+                                <pattern>yyyy</pattern>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
