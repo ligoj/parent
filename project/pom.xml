@@ -94,7 +94,7 @@
         <plugin.buildnumber>3.2.0</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
         <plugin.versions>2.16.1</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
-        <plugin.dependency-check>8.4.0</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+        <plugin.dependency-check>8.4.1</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
         <plugin.jacoco>0.8.11</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
         <plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
         <plugin.sonar>3.10.0.2594</plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
