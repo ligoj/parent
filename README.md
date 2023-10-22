@@ -105,7 +105,7 @@ mvn versions:display-plugin-updates -Pjacoco,it,sources,javadoc
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>maven-plugin</artifactId>
-    <version>21.0.0</version>
+    <version>21.0.3</version>
     <relativePath/>
 </parent>
 ```
@@ -116,7 +116,7 @@ mvn versions:display-plugin-updates -Pjacoco,it,sources,javadoc
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>sonar-plugin</artifactId>
-    <version>21.0.0</version>
+    <version>21.0.3</version>
     <relativePath />
 </parent>
 ```
