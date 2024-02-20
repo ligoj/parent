@@ -226,7 +226,6 @@
                                 <svnrevision>${buildNumber}</svnrevision>
                                 <buildDate>${timestamp}</buildDate>
                                 <url>${project.url}</url>
-                                <key>value</key>
                             </manifestEntries>
                         </archive>
                     </configuration>
