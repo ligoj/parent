@@ -13,11 +13,6 @@
 		<developerConnection>scm:git:https://github.com/ligoj/parent.git</developerConnection>
 		<url>https://github.com/ligoj/parent</url>
 	</scm>
-	<ciManagement>
-		<system>Travis</system>
-		<url>https://travis-ci.com/ligoj/parent/</url>
-		<notifiers />
-	</ciManagement>
 	<organization>
 		<name>Ligoj</name>
 		<url>https://ligoj.io</url>
