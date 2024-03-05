@@ -89,7 +89,7 @@ the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 
 #### Prerequisites
 
-`mvn -Dmaven.version=3.9.4 -Djdk.version=21`
+`mvn -Dmaven.version=3.9.6 -Djdk.version=21`
 
 #### Check updates
 
