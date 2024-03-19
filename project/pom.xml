@@ -90,7 +90,7 @@
         <junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
 
         <!-- Non apache.org plugins -->
-        <plugin.build-helper>3.4.0</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
+        <plugin.build-helper>3.5.0</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
         <plugin.buildnumber>3.2.0</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
         <plugin.versions>2.16.2</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
