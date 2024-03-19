@@ -71,6 +71,7 @@
         <plugin.info>3.4.5</plugin.info> <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
         <plugin.jar>3.3.0</plugin.jar> <!-- http://maven.apache.org/plugins/maven-jar-plugin/summary.html -->
         <plugin.javadoc>3.6.0</plugin.javadoc> <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/summary.html -->
+        <plugin.lombok>1.18.20.0</plugin.lombok>
         <plugin.release>3.0.1</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
         <plugin.resources>3.3.1</plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
         <plugin.scm>2.0.1</plugin.scm> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-scm-plugin -->
@@ -93,12 +94,12 @@
         <plugin.buildnumber>3.2.0</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
         <plugin.versions>2.16.1</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
-        <plugin.dependency-check>8.4.1</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+        <plugin.dependency-check>9.0.10</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
         <plugin.jacoco>0.8.11</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
         <plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
         <plugin.sonar>3.10.0.2594</plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
-        <ant.version>1.10.13</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+        <ant.version>1.10.14</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
         <asm.version>9.5</asm.version> <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm-->
         <gpg.skip>true</gpg.skip>
         <jdk.version>21</jdk.version>
@@ -193,6 +194,23 @@
                     <version>${plugin.site}</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok-maven-plugin</artifactId>
+                    <version>${plugin.lombok}</version>
+                    <configuration>
+                        <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+                        <addOutputDirectory>false</addOutputDirectory>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>delombok</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>${plugin.javadoc}</version>
@@ -204,6 +222,7 @@
                             </goals>
                             <configuration>
                                 <additionalOptions>${plugin.javadoc.additionalOptions}</additionalOptions>
+                                <sourcepath>${project.build.directory}/generated-sources/delombok</sourcepath>
                                 <doclint>all,-missing</doclint>
                                 <failOnError>false</failOnError>
                             </configuration>
@@ -828,6 +847,23 @@
                                 <id>attach-javadocs</id>
                                 <goals>
                                     <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok-maven-plugin</artifactId>
+                        <version>${plugin.lombok}</version>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+                            <addOutputDirectory>false</addOutputDirectory>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>delombok</goal>
                                 </goals>
                             </execution>
                         </executions>

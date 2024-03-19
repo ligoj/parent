@@ -17,6 +17,7 @@ This is a POM with tuned Maven configurations:
 To benefit these features, add this parent to your `pom.xml`
 
 ```xml
+
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>project</artifactId>
@@ -102,6 +103,7 @@ mvn versions:display-plugin-updates -Pjacoco,it,sources,javadoc
 #### Maven Plugin project
 
 ```xml
+
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>maven-plugin</artifactId>
@@ -113,10 +115,11 @@ mvn versions:display-plugin-updates -Pjacoco,it,sources,javadoc
 #### SonarQube Plugin project
 
 ```xml
+
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>sonar-plugin</artifactId>
     <version>21.0.3</version>
-    <relativePath />
+    <relativePath/>
 </parent>
 ```
