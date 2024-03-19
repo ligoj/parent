@@ -23,8 +23,7 @@
         <scm.server>https://${domain.name}</scm.server>
         <scm.server.anonymous>${scm.server}</scm.server.anonymous>
         <copyright.year>2023</copyright.year>
-        <ci.server>https://${domain.name}/jenkins/</ci.server>
-        <JENKINS_URL>${ci.server}</JENKINS_URL>
+        <ci.server>https://${domain.name}/actions/</ci.server>
         <WORKSPACE>${project.build.directory}</WORKSPACE>
         <proxy.server>https://${domain.name}/nexus</proxy.server>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -143,8 +142,8 @@
         <system>GitHub Issues</system>
     </issueManagement>
     <ciManagement>
-        <system>Jenkins</system>
-        <url>${JENKINS_URL}/job/${JOB_NAME}/</url>
+        <system>Github</system>
+        <url>${ci.server}</url>
     </ciManagement>
     <distributionManagement>
         <snapshotRepository>
