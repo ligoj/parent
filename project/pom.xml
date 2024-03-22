@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>project</artifactId>
-    <version>21.0.4-SNAPSHOT</version>
+    <version>21.0.4</version>
     <packaging>pom</packaging>
     <name>Parent - Project</name>
     <description>Parent defining top level global configuration of forge.</description>
@@ -16,7 +16,7 @@
         <url>https://ligoj.io</url>
     </organization>
     <properties>
-        <revision>21.0.4-SNAPSHOT</revision>
+        <revision>21.0.4</revision>
         <gitRepositoryName>parent</gitRepositoryName>
         <workspace>${user.dir}</workspace>
         <domain.name>github.com</domain.name>
@@ -39,10 +39,10 @@
         <maven.ut.forkCount>1</maven.ut.forkCount>
         <maven.ut.testTimeout>${testTimeout}</maven.ut.testTimeout>
         <skipTests>false</skipTests>
+        <skipITs>true</skipITs>
         <maven.ut.skip>${skipTests}</maven.ut.skip>
         <maven.it.argLine.memory>-Xms800m -Xmx800m</maven.it.argLine.memory>
         <maven.it.argLine>${maven.it.argLine.memory}</maven.it.argLine>
-        <skipITs>true</skipITs>
         <maven.it.skip>${skipITs}</maven.it.skip>
         <maven.it.reuseForks>false</maven.it.reuseForks>
         <maven.it.forkCount>1</maven.it.forkCount>
@@ -58,6 +58,7 @@
         <maven.build.date>${maven.build.timestamp}</maven.build.date>
 
         <!-- https://maven.apache.org/plugins/index.html -->
+        <lombok.version>1.18.32</lombok.version>
         <plugin.antrun>3.1.0</plugin.antrun> <!-- http://maven.apache.org/plugins/maven-antrun-plugin/summary.html -->
         <plugin.assembly>3.7.1</plugin.assembly> <!-- http://maven.apache.org/plugins/maven-assembly-plugin/summary.html -->
         <plugin.clean>3.3.2</plugin.clean> <!-- https://maven.apache.org/plugins/maven-clean-plugin/summary.html -->
@@ -85,7 +86,7 @@
         <!-- Test -->
         <plugin.surefire>3.2.5</plugin.surefire> <!-- http://maven.apache.org/surefire/summary.html -->
         <plugin.surefire.report>3.2.5</plugin.surefire.report> <!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
-        <junit.platform.version>1.10.0</junit.platform.version>
+        <junit.platform.version>1.10.2</junit.platform.version>
         <junit.jupiter.version>5.10.0</junit.jupiter.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
 
@@ -199,6 +200,7 @@
                     <version>${plugin.lombok}</version>
                     <configuration>
                         <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+                        <outputDirectory>${project.build.directory}/generated-sources-delombok</outputDirectory>
                         <addOutputDirectory>false</addOutputDirectory>
                     </configuration>
                     <executions>
@@ -222,7 +224,7 @@
                             </goals>
                             <configuration>
                                 <additionalOptions>${plugin.javadoc.additionalOptions}</additionalOptions>
-                                <sourcepath>${project.build.directory}/generated-sources/delombok</sourcepath>
+                                <sourcepath>${project.build.directory}/generated-sources-delombok</sourcepath>
                                 <doclint>all,-missing</doclint>
                                 <failOnError>false</failOnError>
                             </configuration>
@@ -592,7 +594,7 @@
                         <format>XML</format>
                         <name>dependency-check</name>
                         <outputDirectory>${WORKSPACE}</outputDirectory>
-                        <cveValidForHours>48</cveValidForHours>
+                        <nvdValidForHours>48</nvdValidForHours>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -859,6 +861,13 @@
                             <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
                             <addOutputDirectory>false</addOutputDirectory>
                         </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombok.version}</version>
+                            </dependency>
+                        </dependencies>
                         <executions>
                             <execution>
                                 <phase>generate-sources</phase>
