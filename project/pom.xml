@@ -58,7 +58,7 @@
         <maven.build.date>${maven.build.timestamp}</maven.build.date>
 
         <!-- https://maven.apache.org/plugins/index.html -->
-        <lombok.version>1.18.34</lombok.version>
+        <lombok.version>1.18.36</lombok.version>
         <plugin.antrun>3.1.0</plugin.antrun> <!-- http://maven.apache.org/plugins/maven-antrun-plugin/summary.html -->
         <plugin.assembly>3.7.1</plugin.assembly> <!-- http://maven.apache.org/plugins/maven-assembly-plugin/summary.html -->
         <plugin.clean>3.4.0</plugin.clean> <!-- https://maven.apache.org/plugins/maven-clean-plugin/summary.html -->
