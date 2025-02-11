@@ -76,7 +76,7 @@
         <plugin.release>3.0.1</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
         <plugin.resources>3.3.1</plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
         <plugin.scm>2.0.1</plugin.scm> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-scm-plugin -->
-        <plugin.shade>3.5.2</plugin.shade> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
+        <plugin.shade>3.6.0</plugin.shade> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
         <plugin.site>3.12.1</plugin.site> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
         <plugin.source>3.3.1</plugin.source> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
         <plugin.verifier>1.1</plugin.verifier> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-verifier-plugin -->
