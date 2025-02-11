@@ -71,7 +71,7 @@
         <plugin.install>3.1.1</plugin.install> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
         <plugin.info>3.5.0</plugin.info> <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
         <plugin.jar>3.3.0</plugin.jar> <!-- http://maven.apache.org/plugins/maven-jar-plugin/summary.html -->
-        <plugin.javadoc>3.6.3</plugin.javadoc> <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/summary.html -->
+        <plugin.javadoc>3.11.2</plugin.javadoc> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
         <plugin.lombok>1.18.20.0</plugin.lombok>
         <plugin.release>3.0.1</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
         <plugin.resources>3.3.1</plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
