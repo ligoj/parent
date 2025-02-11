@@ -100,7 +100,7 @@
         <plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
         <plugin.sonar>3.11.0.3922</plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 
-        <ant.version>1.10.14</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+        <ant.version>1.10.15</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
         <asm.version>9.5</asm.version> <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm-->
         <gpg.skip>true</gpg.skip>
         <jdk.version>21</jdk.version>
@@ -745,7 +745,6 @@
                     <version>${plugin.info}</version>
                     <configuration>
                         <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
-                        <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
                     </configuration>
                 </plugin>
                 <plugin>
