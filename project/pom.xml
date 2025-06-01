@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>project</artifactId>
-    <version>21.0.7-SNAPSHOT</version>
+    <version>21.0.7</version>
     <packaging>pom</packaging>
     <name>Parent - Project</name>
     <description>Parent defining top level global configuration of forge.</description>
@@ -16,7 +16,7 @@
         <url>https://ligoj.io</url>
     </organization>
     <properties>
-        <revision>21.0.7-SNAPSHOT</revision>
+        <revision>21.0.7</revision>
         <gitRepositoryName>parent</gitRepositoryName>
         <workspace>${user.dir}</workspace>
         <domain.name>github.com</domain.name>
