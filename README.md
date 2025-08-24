@@ -108,7 +108,7 @@ mvn versions:display-dependency-updates -Pjacoco -Dmaven.version.ignore="^(.*[.-
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>maven-plugin</artifactId>
-    <version>21.0.3</version>
+    <version>21.0.8</version>
     <relativePath/>
 </parent>
 ```

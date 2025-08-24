@@ -87,9 +87,9 @@
         <!-- Test -->
         <plugin.surefire>3.5.3</plugin.surefire> <!-- http://maven.apache.org/surefire/summary.html -->
         <plugin.surefire.report>3.5.3</plugin.surefire.report> <!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
-        <junit.jupiter.version>5.13.0</junit.jupiter.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+        <junit.jupiter.version>5.13.4</junit.jupiter.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
-        <junit.platform.version>1.13.0</junit.platform.version> <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+        <junit.platform.version>1.13.4</junit.platform.version> <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
 
         <!-- Non apache.org plugins -->
         <plugin.build-helper>3.6.1</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
