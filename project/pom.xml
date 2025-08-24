@@ -65,13 +65,13 @@
         <plugin.compiler>3.14.0</plugin.compiler> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
         <plugin.dependency>3.8.1</plugin.dependency> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
         <plugin.deploy>3.1.4</plugin.deploy> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
-        <plugin.enforcer>3.5.0</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
+        <plugin.enforcer>3.6.1</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
         <plugin.failsafe>3.5.3</plugin.failsafe> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-failsafe-plugin -->
         <plugin.gpg>1.6</plugin.gpg> <!-- http://maven.apache.org/plugins/maven-gpg-plugin/summary.html -->
         <plugin.install>3.1.4</plugin.install> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
         <plugin.info>3.9.0</plugin.info> <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
         <plugin.jar>3.4.2</plugin.jar> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
-        <plugin.javadoc>3.11.2</plugin.javadoc> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
+        <plugin.javadoc>3.11.3</plugin.javadoc> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
         <plugin.lombok>1.18.20.0</plugin.lombok>
         <plugin.release>3.1.1</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
         <plugin.resources>3.3.1</plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
