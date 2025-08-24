@@ -91,7 +91,7 @@
         <junit.platform.version>1.13.0</junit.platform.version> <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
 
         <!-- Non apache.org plugins -->
-        <plugin.build-helper>3.6.0</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
+        <plugin.build-helper>3.6.1</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
         <plugin.buildnumber>3.2.1</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
         <plugin.versions>2.18.0</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
