@@ -21,7 +21,7 @@
 	<artifactId>root</artifactId>
 	<packaging>pom</packaging>
 	<name>Parent - Root</name>
-	<description>Agregates forge projects</description>
+	<description>Aggregates forge projects</description>
 	<modules>
 		<module>project</module>
 		<module>maven-plugin</module>
