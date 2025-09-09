@@ -40,6 +40,7 @@
         <maven.ut.testTimeout>${testTimeout}</maven.ut.testTimeout>
         <skipTests>false</skipTests>
         <skipITs>true</skipITs>
+        <skipPublishing>false</skipPublishing>
         <maven.ut.skip>${skipTests}</maven.ut.skip>
         <maven.it.argLine.memory>-Xms800m -Xmx800m</maven.it.argLine.memory>
         <maven.it.argLine>${maven.it.argLine.memory}</maven.it.argLine>
@@ -817,6 +818,7 @@
                     <publishingServerId>central</publishingServerId>
                     <autoPublish>true</autoPublish>
                     <waitUntil>published</waitUntil>
+                    <skipPublishing>${skipPublishing}</skipPublishing>
                 </configuration>
             </plugin>
         </plugins>
