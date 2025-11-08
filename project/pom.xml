@@ -83,7 +83,7 @@
         <plugin.source>3.3.1</plugin.source> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
         <plugin.verifier>1.1</plugin.verifier> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-verifier-plugin -->
         <plugin.wagon-webdav-jackrabbit>3.5.3</plugin.wagon-webdav-jackrabbit>
-        <plugin.war>3.4.0</plugin.war> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
+        <plugin.war>3.5.0</plugin.war> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
 
         <!-- Test -->
         <plugin.surefire>3.5.3</plugin.surefire> <!-- http://maven.apache.org/surefire/summary.html -->
@@ -95,7 +95,7 @@
         <!-- Non apache.org plugins -->
         <plugin.build-helper>3.6.1</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
         <plugin.buildnumber>3.2.1</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
-        <plugin.versions>2.18.0</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
+        <plugin.versions>2.19.1</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 
         <plugin.dependency-check>12.1.8</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
         <plugin.jacoco>0.8.14</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
