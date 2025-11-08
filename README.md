@@ -1,4 +1,4 @@
-# :link: Universal parent [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.ligoj.parent/root)
+# :link: Universal parent ![Maven Central](https://img.shields.io/maven-central/v/org.ligoj.parent/root)
 
 Parent POM to get rid of all [Maven](https://maven.apache.org/index.html) issues and to reproduce the builds on any
 seat.
