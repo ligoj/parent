@@ -67,7 +67,7 @@
         <plugin.compiler>3.14.1</plugin.compiler> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
         <plugin.dependency>3.9.0</plugin.dependency> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
         <plugin.deploy>3.1.4</plugin.deploy> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
-        <plugin.enforcer>3.6.1</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
+        <plugin.enforcer>3.6.2</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
         <plugin.failsafe>3.5.3</plugin.failsafe> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-failsafe-plugin -->
         <plugin.gpg>1.6</plugin.gpg> <!-- http://maven.apache.org/plugins/maven-gpg-plugin/summary.html -->
         <plugin.install>3.1.4</plugin.install> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
