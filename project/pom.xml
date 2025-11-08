@@ -809,18 +809,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>${plugin.central-publishing}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <publishingServerId>central</publishingServerId>
-                    <autoPublish>true</autoPublish>
-                    <waitUntil>published</waitUntil>
-                    <skipPublishing>${skipPublishing}</skipPublishing>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
     <profiles>
@@ -1096,6 +1084,25 @@
                     <url>https://maven.pkg.github.com/ligoj/parent</url>
                 </repository>
             </distributionManagement>
+        </profile>
+        <profile>
+            <id>sonatype</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>${plugin.central-publishing}</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
+                            <waitUntil>published</waitUntil>
+                            <skipPublishing>${skipPublishing}</skipPublishing>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 </project>
