@@ -75,7 +75,7 @@
         <plugin.jar>3.4.2</plugin.jar> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
         <plugin.javadoc>3.12.0</plugin.javadoc> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
         <plugin.lombok>1.18.20.0</plugin.lombok>
-        <plugin.release>3.1.1</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
+        <plugin.release>3.2.0</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
         <plugin.resources>3.3.1</plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
         <plugin.scm>2.2.1</plugin.scm> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-scm-plugin -->
         <plugin.shade>3.6.1</plugin.shade> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
@@ -116,8 +116,6 @@
         <plugin.jacoco.include>${jacoco.includes}</plugin.jacoco.include>
         <plugin.javadoc.additionalOptions>-html5</plugin.javadoc.additionalOptions>
         <jacoco.includes>*</jacoco.includes>
-        <plugin.jacoco.ut.argLine>overridden by agent-ut</plugin.jacoco.ut.argLine>
-        <plugin.jacoco.it.argLine>overridden by agent-it</plugin.jacoco.it.argLine>
         <sonar.host.url>https://${domain.name}/sonar/</sonar.host.url>
         <sonar.sourceEncoding>${encoding.java}</sonar.sourceEncoding>
         <sonar.jacoco.reportPath>${plugin.jacoco.ut.destFile}</sonar.jacoco.reportPath>
