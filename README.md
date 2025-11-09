@@ -21,7 +21,7 @@ To benefit these features, add this parent to your `pom.xml`
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>project</artifactId>
-    <version>21.0.10</version>
+    <version>21.0.11</version>
     <relativePath/>
 </parent>
 ```
@@ -108,7 +108,7 @@ mvn versions:display-dependency-updates -Pjacoco -Dmaven.version.ignore="^(.*[.-
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>maven-plugin</artifactId>
-    <version>21.0.10</version>
+    <version>21.0.11</version>
     <relativePath/>
 </parent>
 ```
@@ -120,7 +120,7 @@ mvn versions:display-dependency-updates -Pjacoco -Dmaven.version.ignore="^(.*[.-
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>sonar-plugin</artifactId>
-    <version>21.0.10</version>
+    <version>21.0.11</version>
     <relativePath/>
 </parent>
 ```
