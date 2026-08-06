@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>project</artifactId>
-    <version>21.0.12-SNAPSHOT</version>
+    <version>25.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Parent - Project</name>
     <description>Parent defining top level global configuration of forge.</description>
@@ -16,7 +16,7 @@
         <url>https://ligoj.io</url>
     </organization>
     <properties>
-        <revision>21.0.12-SNAPSHOT</revision>
+        <revision>25.0.0-SNAPSHOT</revision>
         <gitRepositoryName>parent</gitRepositoryName>
         <workspace>${user.dir}</workspace>
         <domain.name>github.com</domain.name>
@@ -32,9 +32,13 @@
         <encoding.javadoc>${encoding.java}</encoding.javadoc>
         <encoding.java>${project.build.sourceEncoding}</encoding.java>
         <test.target.server.hostname>localhost</test.target.server.hostname>
-        <maven.version>3.9.6</maven.version>
         <maven.ut.argLine.memory>-Xms800m -Xmx800m</maven.ut.argLine.memory>
-        <maven.ut.argLine>${maven.ut.argLine.memory}</maven.ut.argLine>
+        <!-- Common test-JVM flags: JDK 24+ (JEP 498) warns on sun.misc.Unsafe memory
+             access (Hazelcast's shaded jctools) — 'allow' silences it; dynamic agent
+             loading covers Mockito/ByteBuddy self-attach. Composed into the ut/it
+             argLines so plain and jacoco runs stay consistent. -->
+        <maven.argLine.jdk>--sun-misc-unsafe-memory-access=allow --enable-preview -XX:+EnableDynamicAgentLoading</maven.argLine.jdk>
+        <maven.ut.argLine>${maven.ut.argLine.memory} ${maven.argLine.jdk}</maven.ut.argLine>
         <maven.ut.reuseForks>true</maven.ut.reuseForks>
         <maven.ut.forkCount>1</maven.ut.forkCount>
         <maven.ut.testTimeout>${testTimeout}</maven.ut.testTimeout>
@@ -43,7 +47,7 @@
         <skipPublishing>false</skipPublishing>
         <maven.ut.skip>${skipTests}</maven.ut.skip>
         <maven.it.argLine.memory>-Xms800m -Xmx800m</maven.it.argLine.memory>
-        <maven.it.argLine>${maven.it.argLine.memory}</maven.it.argLine>
+        <maven.it.argLine>${maven.it.argLine.memory} ${maven.argLine.jdk}</maven.it.argLine>
         <maven.it.skip>${skipITs}</maven.it.skip>
         <maven.it.reuseForks>false</maven.it.reuseForks>
         <maven.it.forkCount>1</maven.it.forkCount>
@@ -59,54 +63,52 @@
         <maven.build.date>${maven.build.timestamp}</maven.build.date>
 
         <!-- https://maven.apache.org/plugins/index.html -->
-        <lombok.version>1.18.38</lombok.version>
         <plugin.antrun>3.2.0</plugin.antrun> <!-- http://maven.apache.org/plugins/maven-antrun-plugin/summary.html -->
-        <plugin.assembly>3.7.1</plugin.assembly> <!-- http://maven.apache.org/plugins/maven-assembly-plugin/summary.html -->
-        <plugin.central-publishing>0.9.0</plugin.central-publishing>
+        <plugin.assembly>3.8.0</plugin.assembly> <!-- http://maven.apache.org/plugins/maven-assembly-plugin/summary.html -->
+        <plugin.build-helper>3.6.1</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
+        <plugin.buildnumber>3.3.0</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
+        <plugin.central-publishing>0.11.0</plugin.central-publishing>
         <plugin.clean>3.5.0</plugin.clean> <!-- https://maven.apache.org/plugins/maven-clean-plugin/summary.html -->
-        <plugin.compiler>3.14.1</plugin.compiler> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-        <plugin.dependency>3.9.0</plugin.dependency> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
+        <plugin.compiler>3.15.0</plugin.compiler> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <plugin.dependency>3.11.0</plugin.dependency> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
+        <plugin.dependency-check>13.0.0</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
         <plugin.deploy>3.1.4</plugin.deploy> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
-        <plugin.enforcer>3.6.2</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
-        <plugin.failsafe>3.5.4</plugin.failsafe> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-failsafe-plugin -->
+        <plugin.enforcer>3.6.3</plugin.enforcer> <!-- http://maven.apache.org/enforcer/enforcer-rules/summary.html -->
+        <plugin.failsafe>3.5.6</plugin.failsafe> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-failsafe-plugin -->
         <plugin.gpg>1.6</plugin.gpg> <!-- http://maven.apache.org/plugins/maven-gpg-plugin/summary.html -->
         <plugin.install>3.1.4</plugin.install> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
         <plugin.info>3.9.0</plugin.info> <!-- http://maven.apache.org/plugins/maven-project-info-reports-plugin/summary.html -->
-        <plugin.jar>3.4.2</plugin.jar> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+        <plugin.jacoco>0.8.15</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+        <plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
+        <plugin.jar>3.5.1</plugin.jar> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
         <plugin.javadoc>3.12.0</plugin.javadoc> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
         <plugin.lombok>1.18.20.0</plugin.lombok>
-        <plugin.release>3.2.0</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
+        <plugin.release>3.3.1</plugin.release> <!-- http://maven.apache.org/plugins/maven-release-plugin/summary.html -->
         <plugin.resources>3.3.1</plugin.resources> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
         <plugin.scm>2.2.1</plugin.scm> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-scm-plugin -->
-        <plugin.shade>3.6.1</plugin.shade> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
-        <plugin.site>3.21.0</plugin.site> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
-        <plugin.source>3.3.1</plugin.source> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
+        <plugin.shade>3.6.2</plugin.shade> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
+        <plugin.site>3.22.0</plugin.site> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+        <plugin.sonar>5.7.0.6970</plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+        <plugin.source>3.4.0</plugin.source> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
+        <plugin.surefire>3.5.6</plugin.surefire> <!-- http://maven.apache.org/surefire/summary.html -->
+        <plugin.surefire.report>3.5.6</plugin.surefire.report> <!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
         <plugin.verifier>1.1</plugin.verifier> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-verifier-plugin -->
+        <plugin.versions>2.21.0</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
         <plugin.wagon-webdav-jackrabbit>3.5.3</plugin.wagon-webdav-jackrabbit>
-        <plugin.war>3.5.0</plugin.war> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
+        <plugin.war>3.5.1</plugin.war> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
 
-        <!-- Test -->
-        <plugin.surefire>3.5.4</plugin.surefire> <!-- http://maven.apache.org/surefire/summary.html -->
-        <plugin.surefire.report>3.5.4</plugin.surefire.report> <!--http://maven.apache.org/surefire/maven-surefire-report-plugin/summary.html -->
-        <junit.jupiter.version>6.0.1</junit.jupiter.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+
+        <ant.version>1.10.17</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+        <asm.version>9.10.1</asm.version> <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
+        <junit.jupiter.version>6.1.2</junit.jupiter.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <junit.platform.surefire.version>1.3.2</junit.platform.surefire.version>
-        <junit.platform.version>6.0.1</junit.platform.version> <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+        <junit.platform.version>6.1.2</junit.platform.version> <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+        <lombok.version>1.18.46</lombok.version>
+        <maven.version>3.9.16</maven.version>
 
-        <!-- Non apache.org plugins -->
-        <plugin.build-helper>3.6.1</plugin.build-helper> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
-        <plugin.buildnumber>3.2.1</plugin.buildnumber> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/buildnumber-maven-plugin -->
-        <plugin.versions>2.19.1</plugin.versions> <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
-
-        <plugin.dependency-check>12.1.8</plugin.dependency-check> <!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
-        <plugin.jacoco>0.8.14</plugin.jacoco> <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-        <plugin.jacoco.listeners>5.14.0.18788</plugin.jacoco.listeners> <!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-jacoco-listeners -->
-        <plugin.sonar>5.2.0.4988</plugin.sonar> <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
-
-        <ant.version>1.10.15</ant.version> <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
-        <asm.version>9.9</asm.version> <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
         <gpg.skip>true</gpg.skip>
-        <jdk.version>21</jdk.version>
-        <jdk.release>21</jdk.release>
+        <jdk.version>25</jdk.version>
+        <jdk.release>25</jdk.release>
         <jdk.enablePreview>false</jdk.enablePreview>
         <jdk.xlint>-Xlint:all,-options,-path,-serial,-processing,-preview,-this-escape</jdk.xlint>
         <!--  javac - -help-lint -->
@@ -284,21 +286,16 @@
                         <release>${jdk.release}</release>
                         <encoding>${encoding.java}</encoding>
                         <enablePreview>${jdk.enablePreview}</enablePreview>
+                        <!-- Since JDK 23, javac no longer runs annotation processors found on
+                             the classpath implicitly (default became -proc:none): full explicitly
+                             restores the pre-23 behavior so Lombok keeps generating code. -->
+                        <proc>full</proc>
+                        <!-- No -J args here: javac runs in-process (no fork), where they are
+                             dropped anyway. The historical -J-add-opens list was the pre-1.18.22
+                             Lombok-on-JDK16 workaround — modern Lombok self-manages its access. -->
                         <compilerArgs>
                             <arg>${jdk.xlint}</arg>
                             <arg>-parameters</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-                            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
-                            <arg>-J-Duser.language=en_us</arg>
                         </compilerArgs>
                     </configuration>
                     <dependencies>
@@ -370,6 +367,8 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${plugin.surefire}</version>
                     <configuration>
+                        <!-- Single argLine (a duplicated element silently overrides the first);
+                             every JVM flag lives in the composed property. -->
                         <argLine>${maven.ut.argLine}</argLine>
                         <failIfNoTests>false</failIfNoTests>
                         <testFailureIgnore>true</testFailureIgnore>
@@ -382,10 +381,6 @@
                         <excludes>
                             <exclude>**/Abstract*</exclude>
                         </excludes>
-                        <argLine>
-                            --enable-preview
-                            -XX:+EnableDynamicAgentLoading
-                        </argLine>
                     </configuration>
                     <dependencies>
                         <dependency>
@@ -455,6 +450,8 @@
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>${plugin.failsafe}</version>
                     <configuration>
+                        <!-- Single argLine (a duplicated element silently overrides the first);
+                             every JVM flag lives in the composed property. -->
                         <argLine>${maven.it.argLine}</argLine>
                         <failIfNoTests>false</failIfNoTests>
                         <testFailureIgnore>true</testFailureIgnore>
@@ -467,10 +464,6 @@
                         <excludes>
                             <exclude>**/Abstract*</exclude>
                         </excludes>
-                        <argLine>
-                            --enable-preview
-                            -XX:+EnableDynamicAgentLoading
-                        </argLine>
                     </configuration>
                     <dependencies>
                         <dependency>

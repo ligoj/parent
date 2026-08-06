@@ -21,7 +21,7 @@ To benefit these features, add this parent to your `pom.xml`
 <parent>
     <groupId>org.ligoj.parent</groupId>
     <artifactId>project</artifactId>
-    <version>21.0.11</version>
+    <version>25.0.0</version>
     <relativePath/>
 </parent>
 ```
@@ -90,37 +90,11 @@ the `MANIFEST.MF` entries, and `target\preject-x.x.x-source.jar`
 
 #### Prerequisites
 
-`mvn -Dmaven.version=3.9.6 -Djdk.version=21`
+`mvn -Dmaven.version=3.9.16 -Djdk.version=25`
 
 #### Check updates
 
 ```bash
 mvn versions:display-plugin-updates -Pjacoco,it,sources,javadoc -Dmaven.version.ignore="^(.*[.-](alpha|beta|rc|M|B|Alpha|Beta|BETA|RC|pre)-?[0-9]*|[0-9]{8}.*)$"
 mvn versions:display-dependency-updates -Pjacoco -Dmaven.version.ignore="^(.*[.-](alpha|beta|rc|M|B|Alpha|Beta|BETA|RC|pre)-?[0-9]*|[0-9]{8}.*)$"
-```
-
-### Available sub parents
-
-#### Maven Plugin project
-
-```xml
-
-<parent>
-    <groupId>org.ligoj.parent</groupId>
-    <artifactId>maven-plugin</artifactId>
-    <version>21.0.11</version>
-    <relativePath/>
-</parent>
-```
-
-#### SonarQube Plugin project
-
-```xml
-
-<parent>
-    <groupId>org.ligoj.parent</groupId>
-    <artifactId>sonar-plugin</artifactId>
-    <version>21.0.11</version>
-    <relativePath/>
-</parent>
 ```
